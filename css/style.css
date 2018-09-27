@@ -1,0 +1,41 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: test;
+  src: url("../font/Yikes_medium.ttf");
+  src: url("../font/MoriMizuumiMarumincho-R.otf");
+}
+
+body {
+  background-color: #FEFEC2;
+  font-family: 'test', sans-serif;
+}
+
+header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+}
+
+header img {
+  position: relative;
+  left: 10px;
+  width: 10%;
+  height: 10%;
+}
+
+header #header-title {
+  width: 35%;
+  max-width: ;
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+}
