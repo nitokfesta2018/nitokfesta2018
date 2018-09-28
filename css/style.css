@@ -1,41 +1,78 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 @font-face {
-  font-family: test;
+  font-family: MoriMizuYikes;
   src: url("../font/Yikes_medium.ttf");
   src: url("../font/MoriMizuumiMarumincho-R.otf");
 }
 
 body {
   background-color: #FEFEC2;
-  font-family: 'test', sans-serif;
+  font-family: 'MoriMizuYikes', sans-serif;
 }
 
-header {
+.navbar {
+  margin: 0;
+  padding: 0;
   background-color: #ffffff;
+  width: 100%;
+}
+
+.navbar-nav {
+  background-color: #53B048;
+  margin: 0;
+}
+
+.navbar-brand {
   display: flex;
   justify-content: flex-start;
 }
 
-header img {
-  position: relative;
-  left: 10px;
-  width: 10%;
-  height: 10%;
+.navbar-brand img {
+  width: 15%;
+  height: 15%;
 }
 
-header #header-title {
-  width: 35%;
-  max-width: ;
+#header-title {
+  width: 55%;
+}
+
+.navbar-toggler {
+  border: none;
+  display: flex;
+  margin-left: auto;
+
   position: relative;
-  
+  bottom: 145px;
+}
+
+.navbar-toggler-icon {
+  min-width: 80px;
+  min-height: 80px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #53B048;
+}
+
+footer p {
+  margin: 0;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
-  justify-content: flex-start;
-  align-items: flex-start;
+  position: relative;
+  top: 5px;
 }
+
