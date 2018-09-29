@@ -1,18 +1,19 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
+/*
 @font-face {
   font-family: MoriMizuYikes;
   src: url("../font/Yikes_medium.ttf");
   src: url("../font/MoriMizuumiMarumincho-R.otf");
 }
+*/
 
 body {
   background-color: #FEFEC2;
-  font-family: 'MoriMizuYikes', sans-serif;
+  font-family: メイリオ, sans-serif;
 }
 
 #navbarNav {
@@ -61,6 +62,37 @@ body {
   min-width: 80px;
   min-height: 80px;
 }
+
+.nav-item a .nav-link {
+  color: #ffffff;
+}
+
+.top-menu {
+  margin: 0;
+  height: 50%;
+}
+
+.top-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.upper, .downer {
+  margin: 0;
+  padding: 0;
+  background-color: #53B048;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.upper a, .downer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
 
 footer {
   position: fixed;
