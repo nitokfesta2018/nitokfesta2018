@@ -67,29 +67,37 @@ body {
   color: #ffffff;
 }
 
+/* 中央寄せのためにdiv生やした */
+.sub-title p {
+  display: inline-block;
+  font-size: 30pt;
+  color: #53B048;
+  border-bottom: solid medium #53B048;
+}
+
+.sub-title {
+  text-align: center;
+}
+
+/* トップページのメニューボタン的なやつ */
 .upper, .downer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
   
   color: #ffffff;
   font-size: 30pt;
   background-color: #53B048;
   
-  width: 40%;
+  width: 90%;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.5);
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .upper img, .downer img {
   width: 40%;
-  opacity: 0.6;
 }
 
 #event-img {
