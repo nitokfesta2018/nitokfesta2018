@@ -67,17 +67,32 @@ body {
 }
 
 .nav-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
   margin-left: 5%;
+  margin-bottom: 5%;
 }
 
 .nav-link img {
+  margin-right: 30px;
   width: 10%;
+  height: 10%;
 }
 
 .nav-link-text p {
-  
+  margin: 0;
   color: #ffffff;
 }
+.text-jp {
+  font-size: 35pt;
+}
+.text-en {
+  font-size: 25pt;
+}
+
 
 /* 中央寄せのためにdiv生やした */
 .sub-title p {
@@ -87,7 +102,6 @@ body {
   color: #577342;
   border-bottom: solid medium #577342;
 }
-
 .sub-title {
   text-align: center;
 }
@@ -122,6 +136,7 @@ body {
   margin: 5%; 
 }
 
+/* フッター */
 footer {
   position: fixed;
   bottom: 0;
@@ -129,7 +144,6 @@ footer {
   height: 100px;
   background-color: #577342;
 }
-
 footer p {
   margin-top: 3%;
 	text-align: center;
