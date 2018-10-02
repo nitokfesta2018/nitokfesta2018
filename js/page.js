@@ -17,7 +17,7 @@ function hamburger()
 }
 
 $(document).ready(function() {
-	//hamburger();
+	hamburger();
 
 	$(this).on("click", ".top-menu-button, .navbar-brand, .nav-link",  function() {
 		$("article#main_content").empty().html("<p id='ajax_load'>Loading...</p>");
