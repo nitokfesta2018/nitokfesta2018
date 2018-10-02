@@ -1,3 +1,20 @@
+// Navbarのリンクをクリックすると、自動でメニューを閉じる
+$('.navbar-nav>li>a').on('click', function(){
+	$('.navbar-collapse').collapse('hide');
+});
+
+// トップページを見ているときは、ハンバーガーメニューを消す
+function hamburger()
+{
+	if ($('article.main_article').css('display') == 'none'){
+		$('nav.navbar').show();
+	}
+	else {
+		$('nav.navbar').hide();
+	}
+}
+
+// ページ遷移
 $(document).on("ready", function() {
 	$(this).on("click", ".", function() {
 		$("article#main_content").empty().html("<p id='ajax_load'>Loading...</p>");
