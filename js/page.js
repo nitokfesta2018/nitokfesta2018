@@ -28,8 +28,7 @@ $(document).ready(function() {
 		$(this).addClass("nav_a_active");
 		*/
 		//ページ遷移 ajax
-		var pagenum = $(this).attr('class');
-		console.log(pagenum);
+		var pagenum = $(this).attr('id').slice(0, 5);
 		switch (pagenum) {
 		  case "page1":
 			pagenum = "event";
@@ -55,7 +54,6 @@ $(document).ready(function() {
 			pagenum = "index";
 			break;
 		}
-		console.log(pagenum);
 		if (pagenum != "index") {
 			$("main article.main_article").css("display", "none");
 			$("main article#main_content").css("display", "block");
