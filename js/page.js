@@ -1,6 +1,8 @@
 // Navbarのリンクをクリックすると、自動でメニューを閉じる
-$('.navbar-nav>li>a').on('click', function(){
-	$('.navbar-collapse').collapse('hide');
+$(function navClick() {
+	$('.navbar-nav>li>a').on('click', function(){
+		$('.navbar-collapse').collapse('hide');
+	});
 });
 
 // トップページを見ているときは、ハンバーガーメニューを消す
@@ -8,9 +10,11 @@ function hamburger()
 {
 	if ($('article.main_article').css('display') == 'none'){
 		$('nav.navbar').show();
+		console.log("表示");
 	}
 	else {
 		$('nav.navbar').hide();
+		console.log("非表示");
 	}
 }
 
