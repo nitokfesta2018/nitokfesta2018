@@ -115,6 +115,9 @@ body {
   justify-content: space-evenly;
 }
 .top-menu-button {
+  width: 45%;
+  margin-bottom: 5%;
+
   color: #ffffff;
   background-color: #577342;
   border-radius: 10px;
@@ -122,18 +125,11 @@ body {
   text-align: center;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
-.upper {
-  width: 45%;
-  margin-bottom: 5%;
-}
-.downer {
-  width: 30%;
-}
-.upper img, .downer img {
+.top-menu-button img {
   width: 50%;
   margin-bottom: 5%;
 }
-.upper p, .downer p {
+.top-menu-button p {
   font-size: 30pt;
   margin: 5%; 
 }

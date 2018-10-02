@@ -9,21 +9,20 @@ $(function navClick() {
 function hamburger()
 {
 	if ($('article.main_article').css('display') == 'none'){
-		$('nav.navbar').show();
-		console.log("表示");
+		$('.navbar-toggler').show();
 	}
 	else {
-		$('nav.navbar').hide();
-		console.log("非表示");
+		$('.navbar-toggler').hide();
 	}
 }
 
-// ページ遷移
-$(document).on("ready", function() {
-	$(this).on("click", ".", function() {
+$(document).ready(function() {
+	hamburger();
+
+	$(this).on("click", ".top-menu-button .",  function() {
 		$("article#main_content").empty().html("<p id='ajax_load'>Loading...</p>");
 		$("html, body").scrollTop(0);
-		//menu style change
+		//page change
 		$("li.side_menu a").removeClass("nav_a_active");
 		$(this).addClass("nav_a_active");
 		//ajaxh
