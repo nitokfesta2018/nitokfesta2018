@@ -135,6 +135,10 @@ body {
   font-size: 30pt;
   margin: 5%; 
 }
+/*pc版のみで表示するページをdisplay:noneに*/
+.pc-only {
+  display: none;
+}
 
 /* フッター */
 footer {
@@ -159,3 +163,11 @@ footer p {
   width: 100%;
   height: 100%;
 }
+
+/* pc版 */
+/*@media screen and (min-width: 600px) {
+  .navbar {
+    display: none;
+  }
+
+}*/
