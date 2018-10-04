@@ -31,11 +31,11 @@ $(document).ready(function() {
 		var pagenum = $(this).attr('id').slice(0, 5);
 		switch (pagenum) {
 		  case "page1":
-			pagenum = "event";
+			pagenum = "commingsoon"; //ページが完成したら、pagenum="event"に変える
 			break;
 
 		  case "page2":
-			pagenum = "timeTable";
+			pagenum = "commingsoon"; //ページが完成したら、pagenum="timetable"に変える
 			break;
 
 		  case "page3":
@@ -47,7 +47,7 @@ $(document).ready(function() {
 			break;
 
 		  case "page5":
-			pagenum = "poster";
+			pagenum = "poster"; //pc版のみのページ
 			break;
 
 		  default:
@@ -64,7 +64,7 @@ $(document).ready(function() {
 				dataType: "html"
 			})
 			.done(function(data) {
-				$("article#main_content").html(data);
+				$('#main_content').html('<p>test!</p>');
 			})
 			.fail(function(data) {
 				alert("読み込みエラーが発生しました。しばらくした後、再度お試しください。");
