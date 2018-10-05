@@ -1,9 +1,10 @@
 // Navbarのリンクをクリックすると、自動でメニューを閉じる
-$(function navClick() {
+/*$(function navClick() {
 	$('.navbar-nav>li>a').on('click', function(){
 		$('.navbar-collapse').collapse('hide');
 	});
 });
+*/
 
 // トップページを見ているときは、ハンバーガーメニューを消す
 function hamburger()
@@ -17,9 +18,8 @@ function hamburger()
 }
 
 $(document).ready(function() {
-	hamburger();
-
-	$(this).on("click", ".top-menu-button, .navbar-brand, .nav-link",  function() {
+	//hamburger();
+	$(this).on("click", ".top-menu-button, .header-img, #nav-open",  function() {
 		$("article#main_content").empty().html("<p id='ajax_load'>Loading...</p>");
 		$("html, body").scrollTop(0);
 		//menu style change
@@ -64,7 +64,7 @@ $(document).ready(function() {
 				dataType: "html"
 			})
 			.done(function(data) {
-				$('#main_content').html('<p>test!</p>');
+				$('#main_content').html(data);
 			})
 			.fail(function(data) {
 				alert("読み込みエラーが発生しました。しばらくした後、再度お試しください。");
