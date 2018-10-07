@@ -103,7 +103,7 @@ header {
   right: 0;
   z-index: 9999;/*最前面に*/
   width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
-  max-width: 250px;/*最大幅（調整してください）*/
+  max-width: 240px;/*最大幅（調整してください）*/
   height: 100%;
   background: #577342;/*背景色*/
   transition: .3s ease-in-out;/*滑らかに表示*/
@@ -252,7 +252,7 @@ header {
   margin: 5%; 
 }
 
-/*pc版のみで表示するページをdisplay:noneに*/
+/*pc版のみで表示する要素をdisplay:noneに*/
 .pc-only {
   display: none;
 }
@@ -285,5 +285,19 @@ footer p {
 @media screen and (min-width: 600px) {
   .pc-only {
     display: block;
+  }
+  .header-img, footer, .main_article > .sub-title, .top-menu, .top-poster, #nav-input, #nav-open, #nav-open span, #nav-open span:before, #nav-open span:after, #nav-input:checked ~ #nav-close, #nav-close, #nav-content-title {
+    display: none;
+  }
+
+  main {
+    margin-left: 240px;
+  }
+  #nav-content {
+    transform: none;
+    transition: none;
+    left: 0;
+    max-width: 240px;
+    
   }
 }
