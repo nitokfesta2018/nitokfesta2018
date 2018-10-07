@@ -24,8 +24,6 @@ body {
 /*ヘッダーまわりはサイトに合わせて調整してください*/
 header {
   width: 100%;
-  height: 15%;
-  max-height: 170px;
   background: #ffffff;
 }
 
@@ -55,19 +53,19 @@ header {
 /*アイコンのスペース*/
 #nav-open {
   position: absolute;
-  top: 40px;
+  top: 20%;
   left: 85%;
   display: inline-block;
-  width: 30px;
-  height: 22px;
+  width: 20%;
+  height: 20%;
   vertical-align: middle;
 }
 
 /*ハンバーガーアイコンをCSSだけで表現*/
 #nav-open span, #nav-open span:before, #nav-open span:after {
   position: relative;
-  height: 10px;/*線の太さ*/
-  width: 100px;/*長さ*/
+  height: 3px;/*線の太さ*/
+  width: 50%;/*長さ*/
   border-radius: 3px;
   background: #555;
   display: block;
@@ -75,10 +73,12 @@ header {
   cursor: pointer;
 }
 #nav-open span:before {
-  bottom: -25px;
+  width: 100%;
+  bottom: -12px;
 }
 #nav-open span:after {
-  bottom: -40px;
+  width: 100%;
+  bottom: -20px;
 }
 
 /*閉じる用の薄黒カバー*/
@@ -103,17 +103,17 @@ header {
   right: 0;
   z-index: 9999;/*最前面に*/
   width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
-  max-width: 550px;/*最大幅（調整してください）*/
+  max-width: 250px;/*最大幅（調整してください）*/
   height: 100%;
   background: #577342;/*背景色*/
   transition: .3s ease-in-out;/*滑らかに表示*/
   -webkit-transform: translateX(-105%);
-  transform: translateX(105%);/*左に隠しておく*/
+  transform: translateX(105%);/*右に隠しておく*/
 }
 #nav-content-title {
   margin: 10% 5%;
   display: inline-block;
-  font-size: 50pt;
+  font-size: 20pt;
   color: #ffffff;
   border-bottom: solid medium #ffffff;
 
@@ -218,9 +218,8 @@ header {
 
 /* 中央寄せのためにdiv生やした */
 .sub-title p {
-  margin: 40px 0;
+  margin: 5% 0;
   display: inline-block;
-  font-size: 30pt;
   color: #577342;
   border-bottom: solid medium #577342;
 }
@@ -250,7 +249,6 @@ header {
   margin-bottom: 5%;
 }
 .top-menu-button p {
-  font-size: 30pt;
   margin: 5%; 
 }
 
@@ -264,14 +262,14 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 50px;
   background-color: #577342;
 }
 footer p {
+  margin: 0;
   position: relative;
-  top: 40px;
+  top: 25%;
 	text-align: center;
-	font-size: 15pt;
 	color: #ffffff;
 	background: none;
 	z-index: 2;
@@ -284,9 +282,8 @@ footer p {
 }
 
 /* pc版 */
-/*@media screen and (min-width: 600px) {
-  .navbar {
-    display: none;
+@media screen and (min-width: 600px) {
+  .pc-only {
+    display: block;
   }
-
-}*/
+}
