@@ -10,16 +10,16 @@
 function hamburger()
 {
 	if ($('article.main_article').css('display') == 'none'){
-		$('.navbar-toggler').show();
+		$('#nav-open').show();
 	}
 	else {
-		$('.navbar-toggler').hide();
+		$('#nav-open').hide();
 	}
 }
 
 $(document).ready(function() {
-	//hamburger();
-	$(this).on("click", ".top-menu-button, .header-img, #nav-open",  function() {
+	hamburger();
+	$(this).on("click", ".top-menu-button, .header-img, .nav-content-link",  function() {
 		$("article#main_content").empty().html("<p id='ajax_load'>Loading...</p>");
 		$("html, body").scrollTop(0);
 		//menu style change
@@ -74,6 +74,7 @@ $(document).ready(function() {
 			$("main article.main_article").css("display", "block");
 			$("main article#main_content").css("display", "none");
 		}
+		hamburger();
 	});
 	
 	//event

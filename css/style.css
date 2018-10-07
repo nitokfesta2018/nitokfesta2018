@@ -76,7 +76,7 @@ header {
   bottom: -25px;
 }
 #nav-open span:after {
-  bottom: -50px;
+  bottom: -40px;
 }
 
 /*閉じる用の薄黒カバー*/
@@ -101,12 +101,24 @@ header {
   right: 0;
   z-index: 9999;/*最前面に*/
   width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
-  max-width: 330px;/*最大幅（調整してください）*/
+  max-width: 550px;/*最大幅（調整してください）*/
   height: 100%;
-  background: #fff;/*背景色*/
+  background: #577342;/*背景色*/
   transition: .3s ease-in-out;/*滑らかに表示*/
   -webkit-transform: translateX(-105%);
-  transform: translateX(-105%);/*左に隠しておく*/
+  transform: translateX(105%);/*左に隠しておく*/
+}
+#nav-content-title {
+  margin: 10% 5%;
+  display: inline-block;
+  font-size: 50pt;
+  color: #ffffff;
+  border-bottom: solid medium #ffffff;
+
+}
+.nav-content-link img {
+  margin: 5%;
+  width: 15%;
 }
 
 /*チェックが入ったらもろもろ表示*/
@@ -119,6 +131,9 @@ header {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);/*中身を表示（右へスライド）*/
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+.nav-content-link {
+
 }
 /*#navbarNav {
   position: relative;
@@ -235,6 +250,9 @@ header {
 .top-menu-button p {
   font-size: 30pt;
   margin: 5%; 
+}
+.pc-only {
+  display: none;
 }
 
 /* フッター */
