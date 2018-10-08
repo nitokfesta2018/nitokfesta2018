@@ -19,9 +19,27 @@ body {
 }
 
 .stage{
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /*text-align: center;*/
 }
 
+.position{
+  font-size: 28px;
+  color: #577342;
+
+}
+.carpet{
+  background-color: white;
+  margin: 80px;
+  border-radius: 5px;
+}
+
+img{
+  width: 300px;
+  height: 390px;
+}
 
 
 /* メニューバー */
