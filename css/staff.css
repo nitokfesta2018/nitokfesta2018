@@ -3,13 +3,18 @@ html, body {
     margin: 0;
     padding: 0;
 }
-  
+
+@font-face {
+  font-family: "notosans";
+  src: url("../font/NotoSansCJKjp-Medium.otf") format("opentype");
+}
+
 body {
     background-color: #FEFEC2;
   /*  background-image: url("../image/bg.png");*/
     background-image: url("../image/ver2.png");
   /*  background-image: url("../image/ver3.png");*/
-    font-family: メイリオ, sans-serif;
+    font-family: notosans, sans-serif;
 }
 
 /* 段落 */
