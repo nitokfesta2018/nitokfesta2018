@@ -4,6 +4,7 @@ html, body {
     padding: 0;
 }
 
+
 @font-face {
   font-family: "notosans";
   src: url("../font/NotoSansCJKjp-Medium.otf") format("opentype");
@@ -30,15 +31,32 @@ body {
   /*text-align: center;*/
 }
 
-.position{
+p{
+  margin: 0;
+}
+
+.name{
   font-size: 28px;
   color: #577342;
-
+  margin: 0;
+}
+.position{
+  margin: 0;
+}
+.say_a_word{
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 .carpet{
   background-color: white;
   margin: 80px;
   border-radius: 5px;
+}
+
+.staff_title{
+  width: 200px;
+  height: 188px;
+  background-color: red;
 }
 
 img{
@@ -128,6 +146,7 @@ img{
 
   
 /* 中央寄せのためにdiv生やした */
+/*
 .sub-title p {
   margin: 40px 0;
   display: inline-block;
@@ -135,6 +154,7 @@ img{
   color: #577342;
   border-bottom: solid medium #577342;
 }
+*/
 .sub-title {
   text-align: center;
 }
