@@ -241,6 +241,9 @@ footer p {
     background-size: cover;
     background-position: center;
   }
+  #main_content {
+    margin-left: 240px;
+  }
   #nav-content {
     transform: none;
     transition: none;
