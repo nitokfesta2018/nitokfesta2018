@@ -24,8 +24,6 @@ body {
 /*ヘッダーまわりはサイトに合わせて調整してください*/
 header {
   width: 100%;
-  height: 15%;
-  max-height: 170px;
   background: #ffffff;
 }
 
@@ -55,19 +53,19 @@ header {
 /*アイコンのスペース*/
 #nav-open {
   position: absolute;
-  top: 40px;
+  top: 20%;
   left: 85%;
   display: inline-block;
-  width: 30px;
-  height: 22px;
+  width: 20%;
+  height: 20%;
   vertical-align: middle;
 }
 
 /*ハンバーガーアイコンをCSSだけで表現*/
 #nav-open span, #nav-open span:before, #nav-open span:after {
   position: relative;
-  height: 10px;/*線の太さ*/
-  width: 100px;/*長さ*/
+  height: 3px;/*線の太さ*/
+  width: 50%;/*長さ*/
   border-radius: 3px;
   background: #555;
   display: block;
@@ -75,10 +73,12 @@ header {
   cursor: pointer;
 }
 #nav-open span:before {
-  bottom: -25px;
+  width: 100%;
+  bottom: -10px;
 }
 #nav-open span:after {
-  bottom: -40px;
+  width: 100%;
+  bottom: -18px;
 }
 
 /*閉じる用の薄黒カバー*/
@@ -103,17 +103,17 @@ header {
   right: 0;
   z-index: 9999;/*最前面に*/
   width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
-  max-width: 550px;/*最大幅（調整してください）*/
+  max-width: 240px;/*最大幅（調整してください）*/
   height: 100%;
   background: #577342;/*背景色*/
   transition: .3s ease-in-out;/*滑らかに表示*/
   -webkit-transform: translateX(-105%);
-  transform: translateX(105%);/*左に隠しておく*/
+  transform: translateX(105%);/*右に隠しておく*/
 }
 #nav-content-title {
   margin: 10% 5%;
   display: inline-block;
-  font-size: 50pt;
+  font-size: 20pt;
   color: #ffffff;
   border-bottom: solid medium #ffffff;
 
@@ -121,6 +121,9 @@ header {
 .nav-content-link img {
   margin: 5%;
   width: 15%;
+}
+.pc-img {
+  display: none;
 }
 
 /*チェックが入ったらもろもろ表示*/
@@ -134,93 +137,11 @@ header {
   transform: translateX(0%);/*中身を表示（右へスライド）*/
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }
-.nav-content-link {
-
-}
-/*#navbarNav {
-  position: relative;
-  bottom: 90px;
-}
-
-.navbar {
-  position: sticky;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  width: 100%;
-  height: 15%;
-  max-height: 170px;
-}
-
-.navbar-nav {
-  background-color: #577342;
-  opacity: 0.9;
-  margin: 0;
-  height: 100%;
-  min-height: 100%;
-}
-
-.navbar-brand {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.navbar-brand img {
-  width: 15%;
-  height: 15%;
-}
-
-#header-title {
-  width: 55%;
-}
-
-.navbar-toggler {
-  border: none;
-  display: flex;
-  margin-left: auto;
-
-  position: relative;
-  bottom: 145px;
-}
-
-.navbar-toggler-icon {
-  min-width: 80px;
-  min-height: 80px;
-}
-
-.nav-link {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-
-  margin-left: 5%;
-  margin-bottom: 5%;
-}
-
-.nav-link img {
-  margin-right: 30px;
-  width: 10%;
-  height: 10%;
-}
-
-.nav-link-text p {
-  margin: 0;
-  color: #ffffff;
-}
-.text-jp {
-  font-size: 35pt;
-}
-.text-en {
-  font-size: 25pt;
-}*/
-
 
 /* 中央寄せのためにdiv生やした */
 .sub-title p {
-  margin: 40px 0;
+  margin: 5% 0;
   display: inline-block;
-  font-size: 30pt;
   color: #577342;
   border-bottom: solid medium #577342;
 }
@@ -250,9 +171,20 @@ header {
   margin-bottom: 5%;
 }
 .top-menu-button p {
-  font-size: 30pt;
   margin: 5%; 
 }
+
+/* NOW LOADING */
+#loading {
+  margin: 0;
+  text-align: center;
+  width: 40%;
+  background-color: #ffffff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*pc版のみで表示する要素をdisplay:noneに*/
 .pc-only {
   display: none;
 }
@@ -262,14 +194,14 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 50px;
   background-color: #577342;
 }
 footer p {
+  margin: 0;
   position: relative;
-  top: 40px;
+  top: 25%;
 	text-align: center;
-	font-size: 15pt;
 	color: #ffffff;
 	background: none;
 	z-index: 2;
@@ -279,4 +211,39 @@ footer p {
 .top-poster img {
   width: 100%;
   height: 100%;
+}
+
+/* pc版 */
+@media screen and (min-width: 601px) {
+  .pc-only, .pc-img {
+    display: block;
+  }
+  .nav-content-title-logo {
+    margin: 5% auto;
+    width: 50%;
+    max-width: 200px;
+  }
+  .nav-content-link > .pc-img {
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+  .header-img, footer, .main_article > .sub-title, .top-menu, .top-poster, #nav-input, #nav-open, #nav-open span, #nav-open span:before, #nav-open span:after, #nav-input:checked ~ #nav-close, #nav-close, #nav-content-title, .sp-img {
+    display: none;
+  }
+  main {
+    margin-left: 240px;
+  }
+  main article.main_article {
+    height: 100%;
+    background: url(../image/top-pc-bg.png);
+    background-size: cover;
+    background-position: center;
+  }
+  #nav-content {
+    transform: none;
+    transition: none;
+    left: 0;
+    max-width: 240px;
+    background-color: #ffffff;
+  }
 }
