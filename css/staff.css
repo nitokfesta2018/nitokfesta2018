@@ -49,14 +49,21 @@ p{
 }
 .carpet{
   background-color: white;
-  margin: 80px;
+  margin: 0 80px 80px 80px;
   border-radius: 5px;
 }
 
+
+.sub-title{
+/*  background-color: red;*/
+  height: 100%;
+  text-align: center;
+}
+
 .staff_title{
-  width: 200px;
-  height: 188px;
-  background-color: red;
+  width: 300px;
+  height: 71px;
+  margin: 50px;
 }
 
 img{
@@ -155,9 +162,6 @@ img{
   border-bottom: solid medium #577342;
 }
 */
-.sub-title {
-  text-align: center;
-}
 
 
 /* トップページのメニューボタン的なやつ */
