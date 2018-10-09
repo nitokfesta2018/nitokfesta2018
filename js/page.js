@@ -1,26 +1,26 @@
 // Navbarのリンクをクリックすると、自動でメニューを閉じる
-$(function navClick() {
+/*$(function navClick() {
 	$('.navbar-nav>li>a').on('click', function(){
 		$('.navbar-collapse').collapse('hide');
 	});
 });
+*/
 
 // トップページを見ているときは、ハンバーガーメニューを消す
 function hamburger()
 {
 	if ($('article.main_article').css('display') == 'none'){
-		$('.navbar-toggler').show();
+		$('#nav-open').show();
 	}
 	else {
-		$('.navbar-toggler').hide();
+		$('#nav-open').hide();
 	}
 }
 
 $(document).ready(function() {
 	hamburger();
-
-	$(this).on("click", ".top-menu-button, .navbar-brand, .nav-link",  function() {
-		$("article#main_content").empty().html("<p id='ajax_load'>Loading...</p>");
+	$(this).on("click", ".top-menu-button, .header-img, .nav-content-link",  function() {
+		$("article#main_content").empty().html("<p id='loading'>Loading...</p>");
 		$("html, body").scrollTop(0);
 		//menu style change
 		/*
@@ -31,11 +31,11 @@ $(document).ready(function() {
 		var pagenum = $(this).attr('id').slice(0, 5);
 		switch (pagenum) {
 		  case "page1":
-			pagenum = "event";
+			pagenum = "commingsoon"; //ページが完成したら、pagenum="event"に変える
 			break;
 
 		  case "page2":
-			pagenum = "timeTable";
+			pagenum = "commingsoon"; //ページが完成したら、pagenum="timetable"に変える
 			break;
 
 		  case "page3":
@@ -47,7 +47,7 @@ $(document).ready(function() {
 			break;
 
 		  case "page5":
-			pagenum = "poster";
+			pagenum = "poster"; //pc版のみのページ
 			break;
 
 		  default:
@@ -64,7 +64,7 @@ $(document).ready(function() {
 				dataType: "html"
 			})
 			.done(function(data) {
-				$("article#main_content").html(data);
+				$('#main_content').html(data);
 			})
 			.fail(function(data) {
 				alert("読み込みエラーが発生しました。しばらくした後、再度お試しください。");
@@ -74,6 +74,7 @@ $(document).ready(function() {
 			$("main article.main_article").css("display", "block");
 			$("main article#main_content").css("display", "none");
 		}
+		hamburger();
 	});
 	
 	//event

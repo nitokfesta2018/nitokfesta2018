@@ -14,95 +14,134 @@ html, body {
 
 body {
   background-color: #FEFEC2;
-  background-image: url("../image/bg.png");
+/*  background-image: url("../image/bg.png");*/
+  background-image: url("../image/ver2.png");
+/*  background-image: url("../image/ver3.png");*/
   font-family: メイリオ, sans-serif;
 }
 
 /* メニューバー */
-#navbarNav {
-  position: relative;
-  bottom: 90px;
-}
-
-.navbar {
-  position: sticky;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
+/*ヘッダーまわりはサイトに合わせて調整してください*/
+header {
   width: 100%;
-  height: 15%;
-  max-height: 170px;
+  background: #ffffff;
 }
 
-.navbar-nav {
-  background-color: #577342;
-  opacity: 0.9;
-  margin: 0;
-  height: 100%;
-  min-height: 100%;
+#nav-drawer {
+  position: relative;
 }
 
-.navbar-brand {
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/* 高専のロゴとか */
+.header-img {
   display: flex;
   justify-content: flex-start;
 }
-
-.navbar-brand img {
+.header-img img {
   width: 15%;
   height: 15%;
 }
-
-#header-title {
+#header-img-title {
   width: 55%;
+  height: 55%;
 }
 
-.navbar-toggler {
-  border: none;
-  display: flex;
-  margin-left: auto;
+/*アイコンのスペース*/
+#nav-open {
+  position: absolute;
+  top: 20%;
+  left: 85%;
+  display: inline-block;
+  width: 20%;
+  height: 20%;
+  vertical-align: middle;
+}
 
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
   position: relative;
-  bottom: 145px;
+  height: 3px;/*線の太さ*/
+  width: 50%;/*長さ*/
+  border-radius: 3px;
+  background: #555;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  width: 100%;
+  bottom: -10px;
+}
+#nav-open span:after {
+  width: 100%;
+  bottom: -18px;
 }
 
-.navbar-toggler-icon {
-  min-width: 80px;
-  min-height: 80px;
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
 }
 
-.nav-link {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-
-  margin-left: 5%;
-  margin-bottom: 5%;
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;/*最前面に*/
+  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 240px;/*最大幅（調整してください）*/
+  height: 100%;
+  background: #577342;/*背景色*/
+  transition: .3s ease-in-out;/*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(105%);/*右に隠しておく*/
 }
-
-.nav-link img {
-  margin-right: 30px;
-  width: 10%;
-  height: 10%;
-}
-
-.nav-link-text p {
-  margin: 0;
+#nav-content-title {
+  margin: 10% 5%;
+  display: inline-block;
+  font-size: 20pt;
   color: #ffffff;
+  border-bottom: solid medium #ffffff;
+
 }
-.text-jp {
-  font-size: 35pt;
+.nav-content-link img {
+  margin: 5%;
+  width: 15%;
 }
-.text-en {
-  font-size: 25pt;
+.pc-img {
+  display: none;
 }
 
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block;/*カバーを表示*/
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);/*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
 
 /* 中央寄せのためにdiv生やした */
 .sub-title p {
-  margin: 40px 0;
+  margin: 5% 0;
   display: inline-block;
-  font-size: 30pt;
   color: #577342;
   border-bottom: solid medium #577342;
 }
@@ -132,8 +171,22 @@ body {
   margin-bottom: 5%;
 }
 .top-menu-button p {
-  font-size: 30pt;
   margin: 5%; 
+}
+
+/* NOW LOADING */
+#loading {
+  margin: 0;
+  text-align: center;
+  width: 40%;
+  background-color: #ffffff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*pc版のみで表示する要素をdisplay:noneに*/
+.pc-only {
+  display: none;
 }
 
 /* フッター */
@@ -141,14 +194,14 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 50px;
   background-color: #577342;
 }
 footer p {
+  margin: 0;
   position: relative;
-  top: 40px;
+  top: 25%;
 	text-align: center;
-	font-size: 15pt;
 	color: #ffffff;
 	background: none;
 	z-index: 2;
@@ -158,4 +211,39 @@ footer p {
 .top-poster img {
   width: 100%;
   height: 100%;
+}
+
+/* pc版 */
+@media screen and (min-width: 601px) {
+  .pc-only, .pc-img {
+    display: block;
+  }
+  .nav-content-title-logo {
+    margin: 5% auto;
+    width: 50%;
+    max-width: 200px;
+  }
+  .nav-content-link > .pc-img {
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+  .header-img, footer, .main_article > .sub-title, .top-menu, .top-poster, #nav-input, #nav-open, #nav-open span, #nav-open span:before, #nav-open span:after, #nav-input:checked ~ #nav-close, #nav-close, #nav-content-title, .sp-img {
+    display: none;
+  }
+  main {
+    margin-left: 240px;
+  }
+  main article.main_article {
+    height: 100%;
+    background: url(../image/top-pc-bg.png);
+    background-size: cover;
+    background-position: center;
+  }
+  #nav-content {
+    transform: none;
+    transition: none;
+    left: 0;
+    max-width: 240px;
+    background-color: #ffffff;
+  }
 }
