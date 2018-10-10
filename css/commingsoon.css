@@ -1,0 +1,30 @@
+#page-commingsoon {
+  margin: 5%;
+  height: 90%;
+  min-height: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.contents {
+  text-align: center;
+}
+
+.contents img {
+  width: 60%;
+}
+
+.contents p {
+  margin: 0;
+  color: #313131;
+}
+
+@media screen and (min-width: 601px) {
+  #page-commingsoon {
+    height: 90%;
+  }
+  .contents img {
+    max-width: 300px;
+  }
+}
