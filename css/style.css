@@ -319,6 +319,7 @@ footer p {
     background-color: #ffffff;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
   }
+  /*
   .footer-pc {
     position: relative;
   }
@@ -328,5 +329,5 @@ footer p {
     margin-top: 15%;
     margin-left: 5%;
     font-size: 10px;
-  }
+  }*/
 }
