@@ -1,3 +1,8 @@
+@charset "utf-8";
+
+/*Noto Sans Japaneseを読みこむ*/
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
 html, body {
   height: 100%;
   margin: 0;
@@ -17,7 +22,7 @@ body {
 /*  background-image: url("../image/bg.png");*/
   background-image: url("../image/ver2.png");
 /*  background-image: url("../image/ver3.png");*/
-  font-family: メイリオ, sans-serif;
+  font-family: 'Noto Sans Japanese', sans-serif;
 }
 
 /* メニューバー */
@@ -250,6 +255,7 @@ footer p {
     left: 0;
     max-width: 240px;
     background-color: #ffffff;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
   }
   .footer-pc {
     position: relative;
