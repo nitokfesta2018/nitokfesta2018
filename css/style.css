@@ -121,11 +121,19 @@ header {
   font-size: 20pt;
   color: #ffffff;
   border-bottom: solid medium #ffffff;
-
+}
+.nav-content-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .nav-content-link img {
   margin: 5%;
-  width: 15%;
+  width: 10%;
+}
+.nav-content-link .sp-link-title {
+  margin: 0;
+  width: 50%;
 }
 .pc-img {
   display: none;
@@ -148,7 +156,8 @@ header {
   margin: 5% 0;
   display: inline-block;
   color: #577342;
-  border-bottom: solid medium #577342;
+  border-bottom: solid 1px #577342;
+
 }
 .sub-title {
   text-align: center;
