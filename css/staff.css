@@ -1,0 +1,74 @@
+p{
+  margin: 0;
+}
+
+/* 段落 */
+.director_gene{
+  display: inline-block;
+  text-align: center;
+}
+
+
+.carpet{
+  background-color: white;
+  margin: 0 5% 5% 5%;
+  border-radius: 10px;
+}
+.stage{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 50px;
+/*  text-align: center;*/
+}
+
+.director_gene {
+  width: 40%;
+}
+
+.director_gene img {
+  width: 100%;
+  max-width: 300px;
+  max-height: 390px;
+}
+.name{
+  font-size: 25px;
+  color: #577342;
+  margin: 0;
+}
+.position{
+  margin: 0;
+}
+.say_a_word{
+  margin-top: 10px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+
+.sub-title{
+/*  background-color: red;
+  height: 100%;*/
+  text-align: center;
+}
+
+.staff_title{
+  /*width: 400px;
+  height: 71px;*/
+  margin: 5%;
+  width: 70%;
+  max-width: 400px;
+  max-height: 71px;
+}
+
+/*img{
+  width: 300px;
+  height: 390px;
+}*/
+
+
+@media screen and (min-width: 1001px) {
+  .director_gene {
+    width: 22%;
+  }
+}
