@@ -7,8 +7,7 @@
 */
 
 // トップページを見ているときは、ハンバーガーメニューを消す
-function hamburger()
-{
+function hamburger() {
 	if ($('article.main_article').css('display') == 'none'){
 		$('#nav-open').show();
 	}
@@ -16,6 +15,12 @@ function hamburger()
 		$('#nav-open').hide();
 	}
 }
+
+$(function clickSpMenu() {
+	$('.nav-content-link > sp-img').on('click', function() {
+		$('#nav-content').
+	})
+})
 
 $(document).ready(function() {
 	hamburger();
