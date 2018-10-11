@@ -266,7 +266,7 @@ footer p {
   .main_article {
     margin-left: 240px;
     height: 100%;
-    background-image: url(../image/sample/background_sample_3.png);
+    background-image: url(../image/logo_top_title.png), url(../image/KosenFes_website_pict_2001_1260.png);
     background-size: cover;
     background-position: center;
   }
@@ -322,7 +322,7 @@ footer p {
   .main_article {
     margin-left: 100px;
     height: 100%;
-    background-image: url(../image/sample/background_sample_3.png);
+    background-image: url(../image/logo_top_title.png), url(../image/KosenFes_website_pict_2001_1260.png);
     background-size: cover;
     background-position: center;
   }
