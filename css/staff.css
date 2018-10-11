@@ -66,11 +66,9 @@ p{
   height: 390px;
 }*/
 
-@media screen and (min-width: 601px) {
-  .director_gene{
+
+@media screen and (min-width: 1001px) {
+  .director_gene {
     width: 22%;
-  }
-  .name {
-    font-size: 25px;
   }
 }
