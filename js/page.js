@@ -16,15 +16,9 @@ function hamburger() {
 	}
 }
 
-$(function clickSpMenu() {
-	$('.nav-content-link > sp-img').on('click', function() {
-		$('#nav-content').
-	})
-})
-
 $(document).ready(function() {
 	hamburger();
-	$(this).on("click", ".top-menu-button, .header-img, .nav-content-link, .nav-content-title-logo",  function() {
+	$(this).on("click", ".top-menu-button, .header-img > img, .nav-content-link, .nav-content-title-logo",  function() {
 		$("article#main_content").empty().html("<p id='loading'>Loading...</p>");
 		$("html, body").scrollTop(0);
 		//menu style change
