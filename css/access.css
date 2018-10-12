@@ -20,6 +20,8 @@ p{
 
 .car_title, .bus_title{
     width: 50%;
+    max-width: 400px;
+    max-height: 71px;
 }
 
 .accent{
@@ -33,15 +35,25 @@ p{
 }
 
 .map{
-    text-align: center;
-    background-color: red;
+    position: relative;
     height: 300px;
 }
 
 .googlemap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform:translate(-50%, -50%);
+    height: 200px;
+}
+.sentence{
+/*    width: 50%;*/
     margin: 0 auto;
-    background-color: blue;
-
+}
+.sentence p{
+    text-align: center;
 }
 
 @media screen and (min-width: 400px){
