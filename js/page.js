@@ -15,13 +15,13 @@ function hamburger() {
 		$('#nav-open').hide();
 	}
 }
-
+/*
 $(function clickSpMenu() {
 	$('.nav-content-link > sp-img').on('click', function() {
 		$('#nav-content').
 	})
 })
-
+*/
 $(document).ready(function() {
 	hamburger();
 	$(this).on("click", ".top-menu-button, .header-img, .nav-content-link, .nav-content-title-logo",  function() {
