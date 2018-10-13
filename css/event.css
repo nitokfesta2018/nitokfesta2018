@@ -1,0 +1,13 @@
+#page-event {
+  margin: 5%;
+  height: 90%;
+  min-height: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+  
+  
+@media screen and (min-width: 1001px) {
+    
+}
