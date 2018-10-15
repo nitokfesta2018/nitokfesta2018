@@ -293,6 +293,7 @@ footer p {
     background: none;
   }
   #nav-content {
+    float: left;
     position: relative;
     top: 10%;
     left: 2%;
