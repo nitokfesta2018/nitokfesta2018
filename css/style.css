@@ -238,6 +238,7 @@ footer p {
     background: none;
   }
   #nav-content {
+    float: left;
     position: relative;
     top: 10%;
     left: 2%;
@@ -336,8 +337,14 @@ footer p {
     background-image: url(../image/KosenFes_website_pict_2001_1260.png);
     */
   }
+  #logo-top-title, #top-image {
+    width: 90%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
   #logo-top-title {
-    height: 70%;
+    z-index: 9998;
   }
   #main_content {
     margin-left: 240px;
