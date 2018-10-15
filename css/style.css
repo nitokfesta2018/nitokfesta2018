@@ -261,7 +261,7 @@ footer p {
   }
   .nav-content-link > .pc-img {
     margin: 10% auto 10%;
-    width: 40%;
+    width: 30%;
   }
   main {
     width: 100%;
@@ -274,8 +274,14 @@ footer p {
     background-image: url(../image/KosenFes_website_pict_2001_1260.png);
     */
   }
+  #logo-top-title, #top-image {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
   #logo-top-title {
-    height: 50%;
+    z-index: 9998;
   }
   #main_content {
     margin-left: 100px;
@@ -338,7 +344,7 @@ footer p {
     */
   }
   #logo-top-title, #top-image {
-    width: 90%;
+    width: 100%;
     position: absolute;
     right: 0;
     top: 0;
@@ -348,14 +354,5 @@ footer p {
   }
   #main_content {
     margin-left: 240px;
-  }
-  .footer-pc {
-    position: relative;
-  }
-  .footer-pc p {
-    position: absolute;
-    top: 0;
-    margin-top: 15%;
-    margin-left: 5%;
   }
 }
