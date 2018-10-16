@@ -226,7 +226,7 @@ footer p {
   #nav-drawer-pc {
     display: block;
     background-color: #ffffff;
-    position: relative;
+    position: absolute;
     width: 20%;
     top: 2%;
     left: 2%;
@@ -253,8 +253,7 @@ footer p {
     max-height: 700px;
     object-fit: cover;
     object-position: 100% 0;
-    position: absolute;
-    top: 0;
+    
   }
   
   /*.pc-only, .pc-img {
