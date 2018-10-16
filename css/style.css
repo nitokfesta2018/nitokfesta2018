@@ -190,7 +190,7 @@ header {
 }
 
 /*PCのトップ画像は表示させない*/
-#top-title-logo, #top-image {
+#top-image {
   display: none;
 }
 
@@ -219,16 +219,18 @@ footer p {
 }
 
 /* ウィンドウ幅xが 601 < x < 1000 */
-@media screen and (min-width: 601px){
+@media screen and (min-width: 660px){
   #nav-drawer-sp, .top-poster-sp, .top-menu, .sub-title-sp {
     display: none;
   }
   #nav-drawer-pc {
     display: block;
-    margin-top: 2%;
-    margin-left: 2%;
-    max-width: 180px;
     background-color: #ffffff;
+    position: relative;
+    width: 20%;
+    top: 2%;
+    left: 2%;
+    z-index: 9999;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     text-align: center;
   }
@@ -237,7 +239,6 @@ footer p {
   }
   #nav-content-title-logo, #nav-content-title-date {
     width: 80%;
-    max-width: 100px;
   }
   .nav-content-link img {
     width: 20%;
@@ -245,9 +246,17 @@ footer p {
   .nav-content-link > .link-title {
     width: 60%;
   }
-  #top-title-logo {
+  #top-image {
     display: block;
+    width: 100%;
+    min-height: 600px;
+    max-height: 700px;
+    object-fit: cover;
+    object-position: 100% 0;
+    position: absolute;
+    top: 0;
   }
+  
   /*.pc-only, .pc-img {
     display: block;
   }
@@ -375,5 +384,5 @@ footer p {
   }
   #main_content {
     margin-left: 240px;
-  }*/
-}
+  }
+}*/
