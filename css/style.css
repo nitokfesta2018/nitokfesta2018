@@ -223,13 +223,13 @@ footer p {
   #nav-drawer-sp, .top-poster-sp, .top-menu, .sub-title-sp {
     display: none;
   }
+  /* PC版メニューバー */
   #nav-drawer-pc {
     display: block;
+    margin-top: 2%;
+    margin-left: 2%;
     background-color: #ffffff;
-    position: absolute;
     width: 20%;
-    top: 2%;
-    left: 2%;
     z-index: 9999;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -256,6 +256,13 @@ footer p {
     
   }
   
+  /* see more */
+  .top-menu-pc {
+    width: 90%;
+    margin: 5%;
+    background-color: #ffffff;
+  }
+
   /*.pc-only, .pc-img {
     display: block;
   }
