@@ -46,9 +46,17 @@ $(document).ready(function() {
 			break;
 
 		  case "page5":
-			pagenum = "poster"; //pc版のみのページ
+			pagenum = "poster"; //PC版のみのページ
+			break;
+		
+		  case "page6":
+			pagenum = "commingsoon" //ページ作ったら sponsor に直す
 			break;
 
+		  case "page7":
+			pagenum = "commingsoon" //ページ作ったら backnumber に直すPC版のみのページ
+			break;
+		
 		  default:
 			pagenum = "index";
 			break;

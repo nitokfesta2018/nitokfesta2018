@@ -5,17 +5,11 @@
 
 html, body {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
-
-/*
-@font-face {
-  font-family: MoriMizuYikes;
-  src: url("../font/Yikes_medium.ttf");
-  src: url("../font/MoriMizuumiMarumincho-R.otf");
-}
-*/
 
 body {
   background-color: #FEFEC2;
@@ -25,22 +19,16 @@ body {
   font-family: 'Noto Sans Japanese', sans-serif;
 }
 
-/* メニューバー */
-/*ヘッダーまわりはサイトに合わせて調整してください*/
+/* スマホのヘッダとメニュー */
 header {
   width: 100%;
   background: #ffffff;
-}
-
-#nav-drawer {
   position: relative;
 }
-
 /*チェックボックス等は非表示に*/
 .nav-unshown {
   display:none;
 }
-
 /* 高専のロゴとか */
 .header-img {
   display: flex;
@@ -54,7 +42,6 @@ header {
   width: 55%;
   height: 55%;
 }
-
 /*アイコンのスペース*/
 #nav-open {
   position: absolute;
@@ -65,8 +52,7 @@ header {
   height: 20%;
   vertical-align: middle;
 }
-
-/*ハンバーガーアイコンをCSSだけで表現*/
+/*ハンバーガーアイコン*/
 #nav-open span, #nav-open span:before, #nav-open span:after {
   position: relative;
   height: 3px;/*線の太さ*/
@@ -85,7 +71,6 @@ header {
   width: 100%;
   bottom: -18px;
 }
-
 /*閉じる用の薄黒カバー*/
 #nav-close {
   display: none;/*はじめは隠しておく*/
@@ -99,9 +84,8 @@ header {
   opacity: 0;
   transition: .3s ease-in-out;
 }
-
 /*中身*/
-#nav-content {
+#nav-content-sp {
   overflow: auto;
   position: fixed;
   top: 0;
@@ -131,35 +115,35 @@ header {
   margin: 5%;
   width: 20%;
 }
-.nav-content-link .sp-link-title {
+.nav-content-link > .link-title {
   margin: 0;
   width: 60%;
 }
-.pc-img {
-  display: none;
-}
-
 /*チェックが入ったらもろもろ表示*/
 #nav-input:checked ~ #nav-close {
   display: block;/*カバーを表示*/
   opacity: .5;
 }
-
-#nav-input:checked ~ #nav-content {
+#nav-input:checked ~ #nav-content-sp {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);/*中身を表示（右へスライド）*/
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }
 
+/* PCのメニューバーは表示させない */
+#nav-drawer-pc {
+  display: none;
+}
+
 /* 中央寄せのためにdiv生やした */
-.sub-title p {
+.sub-title-sp p {
   margin: 5% 0;
   display: inline-block;
   color: #577342;
   border-bottom: solid 1px #577342;
 
 }
-.sub-title {
+.sub-title-sp {
   text-align: center;
 }
 
@@ -169,8 +153,15 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.top-menu-button {
+/* メニューボタン上段 */
+.upper {
   width: 45%;
+}
+/* メニューボタン下段 */
+.lower {
+  width: 30%;
+}
+.top-menu-button {
   margin-bottom: 5%;
 
   color: #ffffff;
@@ -198,8 +189,8 @@ header {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-/*pc版のみで表示する要素をdisplay:noneに*/
-.pc-only {
+/*PCのトップ画像は表示させない*/
+#top-image {
   display: none;
 }
 
@@ -222,20 +213,74 @@ footer p {
 }
 
 /* ポスター */
-.top-poster img {
+.top-poster-sp img {
   width: 100%;
   height: 100%;
 }
 
 /* ウィンドウ幅xが 601 < x < 1000 */
-@media screen and (min-width: 601px) and (max-width: 1000px) {
-  .pc-only, .pc-img {
+@media screen and (min-width: 660px){
+  #nav-drawer-sp, .top-poster-sp, .top-menu, .sub-title-sp {
+    display: none;
+  }
+  #nav-drawer-pc {
     display: block;
+    background-color: #ffffff;
+    position: relative;
+    width: 20%;
+    top: 2%;
+    left: 2%;
+    z-index: 9999;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  #nav-content-title-logo {
+    margin-top: 5%;
+  }
+  #nav-content-title-logo, #nav-content-title-date {
+    width: 80%;
+  }
+  .nav-content-link img {
+    width: 20%;
+  }
+  .nav-content-link > .link-title {
+    width: 60%;
+  }
+  #top-image {
+    display: block;
+    width: 100%;
+    min-height: 600px;
+    max-height: 700px;
+    object-fit: cover;
+    object-position: 100% 0;
+    position: absolute;
+    top: 0;
+  }
+  
+  /*.pc-only, .pc-img {
+    display: block;
+  }
+  .link-title, .header-img, .nav-content-title-date, footer, .main_article > .sub-title, .top-menu, .top-poster, #nav-input, #nav-open, #nav-open span, #nav-open span:before, #nav-open span:after, #nav-input:checked ~ #nav-close, #nav-close, #nav-content-title, .sp-img {
+    display: none;
+  }
+  header {
+    background: none;
+  }
+  #nav-content {
+    float: left;
+    position: relative;
+    top: 10%;
+    left: 2%;
+    transform: none;
+    transition: none;
+    max-width: 100px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
   }
   .nav-content-title-logo {
     margin: 10% auto 10%;
     width: 80%;
-    max-width: 200px;
+    max-width: 100px;
   }
   .nav-content-link:first-of-type {
     border-top: 1px solid #eee;
@@ -245,10 +290,7 @@ footer p {
   }
   .nav-content-link > .pc-img {
     margin: 10% auto 10%;
-    width: 50%;
-  }
-  .link-title, .header-img, footer, .main_article > .sub-title, .top-menu, .top-poster, #nav-input, #nav-open, #nav-open span, #nav-open span:before, #nav-open span:after, #nav-input:checked ~ #nav-close, #nav-close, #nav-content-title, .sp-img {
-    display: none;
+    width: 30%;
   }
   main {
     width: 100%;
@@ -256,47 +298,52 @@ footer p {
   }
   .main_article {
     margin-left: 100px;
-    height: 100%;
+    width: 100%;
     background-image: url(../image/KosenFes_website_pict_2001_1260.png);
-    background-size: cover;
-    background-position: center;
+  }
+  #logo-top-title, #top-image {
+    height: 80%;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
   #logo-top-title {
-    height: 50%;
+    z-index: 9998;
   }
   #main_content {
     margin-left: 100px;
-  }
-  #nav-content {
-    transform: none;
-    transition: none;
-    left: 0;
-    max-width: 100px;
-    background-color: #ffffff;
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
-  }
-  /*
-  .footer-pc {
-    position: relative;
-  }
-  .footer-pc p {
-    position: absolute;
-    top: 0;
-    margin-top: 15%;
-    margin-left: 5%;
-    font-size: 10px;
   }*/
 }
 
-/* ウィンドウ幅が1001以上 */
-@media screen and (min-width: 1001px) {
+/* ウィンドウ幅が以上 */
+/*@media screen and (min-width: 1001px) {
   .pc-only, .pc-img {
     display: block;
   }
-  .nav-content-title-logo {
-    margin: 5% auto 20%;
+  .header-img, footer, .main_article > .sub-title, .top-menu, .top-poster, #nav-input, #nav-open, #nav-open span, #nav-open span:before, #nav-open span:after, #nav-input:checked ~ #nav-close, #nav-close, #nav-content-title, .sp-img {
+    display: none;
+  }
+  header {
+    
+  }
+  #nav-content {
+    float: left;
+    position: relative;
+    top: 10%;
+    left: 2%;
+    transform: none;
+    transition: none;
+    max-width: 240px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  }
+  .nav-content-title-logo, .nav-content-title-date {
+    margin: 5% auto 5%;
     width: 50%;
     max-width: 200px;
+  }
+  .nav-content-title-date {
+    width: 80%;
   }
   .nav-content-link:first-of-type {
     border-top: 1px solid #eee;
@@ -310,14 +357,11 @@ footer p {
   }
   .nav-content-link > .pc-img {
     margin-left: 10%;
-    width: 20%;
+    width: 15%;
   }
   .nav-content-link > .link-title {
     margin: 0;
-    width: 60%;
-  }
-  .header-img, footer, .main_article > .sub-title, .top-menu, .top-poster, #nav-input, #nav-open, #nav-open span, #nav-open span:before, #nav-open span:after, #nav-input:checked ~ #nav-close, #nav-close, #nav-content-title, .sp-img {
-    display: none;
+    width: 55%;
   }
   main {
     width: 100%;
@@ -325,32 +369,20 @@ footer p {
   }
   .main_article {
     margin-left: 240px;
-    height: 100%;
+    width: 50%;
     background-image: url(../image/KosenFes_website_pict_2001_1260.png);
-    background-size: cover;
-    background-position: center;
+    
+  }
+  #logo-top-title, #top-image {
+    height: 80%;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
   #logo-top-title {
-    height: 70%;
+    z-index: 9998;
   }
   #main_content {
     margin-left: 240px;
   }
-  #nav-content {
-    transform: none;
-    transition: none;
-    left: 0;
-    max-width: 240px;
-    background-color: #ffffff;
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
-  }
-  .footer-pc {
-    position: relative;
-  }
-  .footer-pc p {
-    position: absolute;
-    top: 0;
-    margin-top: 15%;
-    margin-left: 5%;
-  }
-}
+}*/
