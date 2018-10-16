@@ -295,10 +295,10 @@ footer p {
     display: none;
   }
   header {
-    background: none;
+    
   }
   #nav-content {
-    float: left;
+    /*float: left;*/
     position: relative;
     top: 10%;
     left: 2%;
