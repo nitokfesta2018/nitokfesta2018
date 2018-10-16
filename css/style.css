@@ -5,6 +5,7 @@
 
 html, body {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -96,7 +97,7 @@ header {
 #nav-content {
   overflow: auto;
   position: fixed;
-  top: 0;
+/*  top: 0;*/
   right: 0;
   z-index: 9999;/*最前面に*/
   width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
@@ -238,7 +239,7 @@ footer p {
     background: none;
   }
   #nav-content {
-    float: left;
+    /*float: left;*/
     position: relative;
     top: 10%;
     left: 2%;
