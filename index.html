@@ -8,12 +8,6 @@
   <meta name="keyword" content="沖縄高専,高専祭,沖縄高専祭"/>
   <meta name="description" content="10月27日、28日に、「第14回沖縄高専祭」が沖縄工業高等専門学校にて開催されます。">
 
-  <!-- Bootstrap -->
-  <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" media="all">  
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
-
   <!-- css -->
   <link href="./css/style.css" rel="stylesheet" type="text/css">
   <link href="./css/commingsoon.css" rel="stylesheet" type="text/css">
@@ -29,8 +23,9 @@
 </head>
 
 <body>
+  <!-- スマホ ヘッダとドロワーメニュー -->
   <header>
-    <div id="nav-drawer">
+    <div id="nav-drawer-sp">
       <div class="header-img" id="page0">
         <img src="./image/logo_kosen.png">
         <img id="header-img-title" src="./image/title/logo_ver2.png">
@@ -38,78 +33,105 @@
       <input id="nav-input" type="checkbox" class="nav-unshown ">
       <label id="nav-open" for="nav-input"><span></span></label>
       <label class="nav-unshown " id="nav-close" for="nav-input"></label>
-      <div id="nav-content">
+      <!-- メニューの中身 -->
+      <div id="nav-content-sp">
         <p id="nav-content-title">MENU</p>
-        <img class="pc-img nav-content-title-logo" id="page0" src="./image/logo_kosen.png">
-        <img class="pc-img nav-content-title-date" id="page0" src="./image/title/logo_ver2.png">
         <!-- home -->
         <div class="nav-content-link" id="page0">
-          <img class="sp-img" src="./image/icon/top_white.png">
-          <img class="pc-img" src="./image/icon/top_green.png">
-          <img class="sp-img sp-link-title" src="./image/title/menu_Phone/top_phone.png">
-          <img class="pc-img link-title" src="./image/title/menu_PC/top_menubar.png">
+          <img src="./image/icon/top_white.png">
+          <img class="link-title" src="./image/title/menu_Phone/top_phone.png">
         </div>
         <!-- event -->
         <div class="nav-content-link" id="page1">
-          <img class="sp-img" src="./image/icon/event_white.png">
-          <img class="pc-img" src="./image/icon/event_green.png">
-          <img class="sp-img sp-link-title" src="./image/title/menu_Phone/event_phone.png">
-          <img class="pc-img link-title" src="./image/title/menu_PC/event_menubar.png">
+          <img src="./image/icon/event_white.png">
+          <img class="link-title" src="./image/title/menu_Phone/event_phone.png">
         </div>
         <!-- timetable -->
         <div class="nav-content-link" id="page2">
-          <img class="sp-img" src="./image/icon/timetable_white.png">
-          <img class="pc-img" src="./image/icon/timetable_green.png">
-          <img class="sp-img sp-link-title" src="./image/title/menu_Phone/timetable_phone.png">
-          <img class="pc-img link-title" src="./image/title/menu_PC/timetable_menubar.png">
-        </div>
-        <!-- poster -->
-        <div class="nav-content-link pc-only" id="page5">
-          <img class="pc-img" src="./image/icon/poster_green.png">
-          <img class="pc-img link-title" src="./image/title/menu_PC/poster_menubar .png">
+          <img src="./image/icon/timetable_white.png">
+          <img class="link-title" src="./image/title/menu_Phone/timetable_phone.png">
         </div>
         <!-- sponsor -->
         <div class="nav-content-link" id="page6">
-          <img class="sp-img" src="./image/icon/sponsor_white.png">
-          <img class="pc-img" src="./image/icon/sponsor_green.png">
+          <img src="./image/icon/sponsor_white.png">
           <!-- ここに文字が入る -->
         </div>
         <!-- staff -->
         <div class="nav-content-link" id="page4">
-          <img class="sp-img" src="./image/icon/staff_white.png">
-          <img class="pc-img" src="./image/icon/staff_green.png">
-          <img class="sp-img sp-link-title" src="./image/title/menu_Phone/staff_phone.png">
-          <img class="pc-img link-title" src="./image/title/menu_PC/staff_menubar.png">
+          <img src="./image/icon/staff_white.png">
+          <img class="link-title" src="./image/title/menu_Phone/staff_phone.png">
         </div>
         <!-- access -->
         <div class="nav-content-link" id="page3">
-          <img class="sp-img" src="./image/icon/access_white.png">
-          <img class="pc-img" src="./image/icon/access_green.png">
-          <img class="sp-img sp-link-title" src="./image/title/menu_Phone/access_phone.png">
-          <img class="pc-img link-title" src="./image/title/menu_PC/access.png">
-        </div>
-        <!-- backnumber -->
-        <div class="nav-content-link pc-only" id="page7">
-          <img class="pc-img" src="./image/icon/backnumber_green.png">
-          <!--<img class="pc-img link-title" src="./image/title/menu_PC/access.png">-->
+          <img src="./image/icon/access_white.png">
+          <img class="link-title" src="./image/title/menu_Phone/access_phone.png">
         </div>
       </div>
     </div>
   </header>
 
+  <!-- PC メニューバー -->
+  <div id="nav-drawer-pc">
+      <img id="nav-content-title-logo" id="page0" src="./image/logo_kosen.png">
+      <img id="nav-content-title-date" id="page0" src="./image/title/logo_ver2.png">
+    <div id="nav-content-pc">
+      <!-- home -->
+      <div class="nav-content-link" id="page0">
+        <img src="./image/icon/top_green.png">
+        <img class="link-title" src="./image/title/menu_PC/top_menubar.png">
+      </div>
+      <!-- event -->
+      <div class="nav-content-link" id="page1">
+        <img src="./image/icon/event_green.png">
+        <img class="link-title" src="./image/title/menu_PC/event_menubar.png">
+      </div>
+      <!-- timetable -->
+      <div class="nav-content-link" id="page2">
+        <img src="./image/icon/timetable_green.png">
+        <img class="link-title" src="./image/title/menu_PC/timetable_menubar.png">
+      </div>
+      <!-- poster -->
+      <div class="nav-content-link pc-only" id="page5">
+        <img src="./image/icon/poster_green.png">
+        <img class="link-title" src="./image/title/menu_PC/poster_menubar .png">
+      </div>
+      <!-- sponsor -->
+      <div class="nav-content-link" id="page6">
+        <img src="./image/icon/sponsor_green.png">
+        <!-- ここに文字が入る -->
+      </div>
+      <!-- staff -->
+      <div class="nav-content-link" id="page4">
+        <img src="./image/icon/staff_green.png">
+        <img class="link-title" src="./image/title/menu_PC/staff_menubar.png">
+      </div>
+      <!-- access -->
+      <div class="nav-content-link" id="page3">
+        <img src="./image/icon/access_green.png">
+        <img class="link-title" src="./image/title/menu_PC/access.png">
+      </div>
+      <!-- backnumber -->
+      <div class="nav-content-link" id="page7">
+        <img src="./image/icon/backnumber_green.png">
+        <!--<img class="link-title" src="./image/title/menu_PC/access.png">-->
+      </div>
+    </div>
+  </div>
+  
   <main>
     <article class="main_article">
-      <img id="logo-top-title" class="pc-only" src="image/logo_top_title_ver4.png" >
-      <img id="top-image" class="pc-only" src="image/KosenFes_website_pict_2001_1260.png" >
-      <div class="top-poster">  
+      <img id="top-title-logo"src="image/logo_top_title_ver4.png">
+      <img id="top-image" src="image/top_pc_ver1.png">
+      
+      <div class="top-poster-sp">  
         <img src="./image/poster.png">
       </div>
 
-      <div class="sub-title">
+      <div class="sub-title-sp">
         <p>開催情報</p>
       </div>
 
-      <!-- 上段 -->
+      <!-- スマホ 上段 -->
       <span class="top-menu">
         <span id="page1-top" class="top-menu-button upper">
           <p>企画・イベント</p>
@@ -121,7 +143,7 @@
         </span>
       </span>
 
-      <!-- 下段 -->
+      <!-- スマホ 下段 -->
       <span class="top-menu">
         <span id="page3-top" class="top-menu-button lower">
           <p>アクセス</p>

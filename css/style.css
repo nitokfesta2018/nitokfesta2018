@@ -19,21 +19,16 @@ body {
   font-family: 'Noto Sans Japanese', sans-serif;
 }
 
-/* メニューバー */
+/* スマホのヘッダとメニュー */
 header {
   width: 100%;
   background: #ffffff;
-}
-
-#nav-drawer {
   position: relative;
 }
-
 /*チェックボックス等は非表示に*/
 .nav-unshown {
   display:none;
 }
-
 /* 高専のロゴとか */
 .header-img {
   display: flex;
@@ -47,7 +42,6 @@ header {
   width: 55%;
   height: 55%;
 }
-
 /*アイコンのスペース*/
 #nav-open {
   position: absolute;
@@ -58,8 +52,7 @@ header {
   height: 20%;
   vertical-align: middle;
 }
-
-/*ハンバーガーアイコンをCSSだけで表現*/
+/*ハンバーガーアイコン*/
 #nav-open span, #nav-open span:before, #nav-open span:after {
   position: relative;
   height: 3px;/*線の太さ*/
@@ -78,7 +71,6 @@ header {
   width: 100%;
   bottom: -18px;
 }
-
 /*閉じる用の薄黒カバー*/
 #nav-close {
   display: none;/*はじめは隠しておく*/
@@ -92,12 +84,11 @@ header {
   opacity: 0;
   transition: .3s ease-in-out;
 }
-
 /*中身*/
-#nav-content {
+#nav-content-sp {
   overflow: auto;
   position: fixed;
-/*  top: 0;*/
+  top: 0;
   right: 0;
   z-index: 9999;/*最前面に*/
   width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
@@ -124,35 +115,35 @@ header {
   margin: 5%;
   width: 20%;
 }
-.nav-content-link .sp-link-title {
+.nav-content-link > .link-title {
   margin: 0;
   width: 60%;
 }
-.pc-img {
-  display: none;
-}
-
 /*チェックが入ったらもろもろ表示*/
 #nav-input:checked ~ #nav-close {
   display: block;/*カバーを表示*/
   opacity: .5;
 }
-
-#nav-input:checked ~ #nav-content {
+#nav-input:checked ~ #nav-content-sp {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);/*中身を表示（右へスライド）*/
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }
 
+/* PCのメニューバーは表示させない */
+#nav-drawer-pc {
+  display: none;
+}
+
 /* 中央寄せのためにdiv生やした */
-.sub-title p {
+.sub-title-sp p {
   margin: 5% 0;
   display: inline-block;
   color: #577342;
   border-bottom: solid 1px #577342;
 
 }
-.sub-title {
+.sub-title-sp {
   text-align: center;
 }
 
@@ -198,8 +189,8 @@ header {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-/*pc版のみで表示する要素をdisplay:noneに*/
-.pc-only {
+/*PCのトップ画像は表示させない*/
+#top-title-logo, #top-image {
   display: none;
 }
 
@@ -222,14 +213,42 @@ footer p {
 }
 
 /* ポスター */
-.top-poster img {
+.top-poster-sp img {
   width: 100%;
   height: 100%;
 }
 
 /* ウィンドウ幅xが 601 < x < 1000 */
-@media screen and (min-width: 601px) and (max-width: 1000px) {
-  .pc-only, .pc-img {
+@media screen and (min-width: 601px){
+  #nav-drawer-sp, .top-poster-sp, .top-menu, .sub-title-sp {
+    display: none;
+  }
+  #nav-drawer-pc {
+    display: block;
+    margin-top: 2%;
+    margin-left: 2%;
+    max-width: 180px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  #nav-content-title-logo {
+    margin-top: 5%;
+  }
+  #nav-content-title-logo, #nav-content-title-date {
+    width: 80%;
+    max-width: 100px;
+  }
+  .nav-content-link img {
+    width: 20%;
+  }
+  .nav-content-link > .link-title {
+    width: 60%;
+  }
+  #top-title-logo {
+    display: block;
+  }
+  /*.pc-only, .pc-img {
     display: block;
   }
   .link-title, .header-img, .nav-content-title-date, footer, .main_article > .sub-title, .top-menu, .top-poster, #nav-input, #nav-open, #nav-open span, #nav-open span:before, #nav-open span:after, #nav-input:checked ~ #nav-close, #nav-close, #nav-content-title, .sp-img {
@@ -239,7 +258,7 @@ footer p {
     background: none;
   }
   #nav-content {
-    /*float: left;*/
+    float: left;
     position: relative;
     top: 10%;
     left: 2%;
@@ -284,11 +303,11 @@ footer p {
   }
   #main_content {
     margin-left: 100px;
-  }
+  }*/
 }
 
 /* ウィンドウ幅が以上 */
-@media screen and (min-width: 1001px) {
+/*@media screen and (min-width: 1001px) {
   .pc-only, .pc-img {
     display: block;
   }
@@ -299,7 +318,7 @@ footer p {
     
   }
   #nav-content {
-    /*float: left;*/
+    float: left;
     position: relative;
     top: 10%;
     left: 2%;
@@ -341,9 +360,9 @@ footer p {
   }
   .main_article {
     margin-left: 240px;
-    /*width: 50%;
+    width: 50%;
     background-image: url(../image/KosenFes_website_pict_2001_1260.png);
-    */
+    
   }
   #logo-top-title, #top-image {
     height: 80%;
@@ -356,5 +375,5 @@ footer p {
   }
   #main_content {
     margin-left: 240px;
-  }
+  }*/
 }
