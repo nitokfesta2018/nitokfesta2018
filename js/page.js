@@ -75,7 +75,6 @@ $(document).ready(function() {
 		}
 		hamburger();
 	});
-	
 	//event
 	/*
 	$(this).on("click", "p#event_selector span", function() {
