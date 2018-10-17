@@ -170,7 +170,7 @@ header {
   border-radius: 10px;
 
   text-align: center;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
 }
 .top-menu-button img {
   width: 50%;
@@ -178,6 +178,9 @@ header {
 }
 .top-menu-button p {
   margin: 5%; 
+}
+.top-menu-pc {
+  display: none;
 }
 
 /* NOW LOADING */
@@ -245,6 +248,9 @@ footer p {
   #nav-content-title-logo-pc, #nav-content-title-date-pc {
     width: 70%;
   }
+  #nav-content-pc > .nav-content-link {
+    cursor: pointer;
+  }
   #nav-content-pc > .nav-content-link img {
     width: 20%;
   }
@@ -260,16 +266,43 @@ footer p {
     display: block;
     width: 100%;
     min-height: 600px;
-    max-height: 700px;
+    max-height: 800px;
     object-fit: cover;
     object-position: 100% 0;
   }
-  
-  /* see more */
+
+  /* 小見出し的な */
+  .sub-title p {
+    font-size: 20pt;
+  }
+
+  /* でっかい四角いやつ */
   .top-menu-pc {
+    display: block;
     width: 90%;
+    height: 400px;
     margin: 5%;
-    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  .top-menu-pc > .title {
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 40%;
+  }
+  /* background */
+  #top-menu-event {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)), url(../image/top-background/event.JPG);
+    background-size: cover;
+    background-position: center;
+  }
+  /* see more */
+  .see-more-pc {
+    cursor: pointer;
+    width: 30%;
+    position: relative;
+    top: 150px;
+    right: -25%;
   }
 
   /*.pc-only, .pc-img {
