@@ -8,7 +8,6 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 body {
@@ -19,12 +18,14 @@ body {
   font-family: 'Noto Sans Japanese', sans-serif;
 }
 
-/* スマホのヘッダとメニュー */
+/* スマホ・PCのメニュー */
 header {
   width: 100%;
   background: #ffffff;
   position: relative;
 }
+
+/* スマホのヘッダとメニュー */
 /*チェックボックス等は非表示に*/
 .nav-unshown {
   display:none;
@@ -196,8 +197,8 @@ header {
 
 /* フッター */
 footer {
-  position: relative;
-  bottom: 0;
+  position: absolute;
+  top: 100%;
   width: 100%;
   height: 50px;
   background-color: #577342;
@@ -218,33 +219,42 @@ footer p {
   height: 100%;
 }
 
-/* ウィンドウ幅xが 601 < x < 1000 */
+/* ウィンドウ幅xが 660以上 */
 @media screen and (min-width: 660px){
-  #nav-drawer-sp, .top-poster-sp, .top-menu, .sub-title-sp {
+  header, .top-poster-sp, .top-menu, .sub-title-sp {
     display: none;
   }
+  /* PC版メニューバー */
   #nav-drawer-pc {
     display: block;
-    background-color: #ffffff;
-    position: relative;
-    width: 20%;
+    position: absolute;
     top: 2%;
     left: 2%;
-    z-index: 9999;
+  }
+  #nav-content-pc {
+    margin: 0;
+    width: 240px;
+    height: 100%;
+    background-color: #ffffff;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     text-align: center;
   }
-  #nav-content-title-logo {
+  #nav-content-title-logo-pc {
     margin-top: 5%;
   }
-  #nav-content-title-logo, #nav-content-title-date {
-    width: 80%;
+  #nav-content-title-logo-pc, #nav-content-title-date-pc {
+    width: 70%;
   }
-  .nav-content-link img {
+  #nav-content-pc > .nav-content-link img {
     width: 20%;
   }
-  .nav-content-link > .link-title {
+  #nav-content-pc > .nav-content-link > .link-title {
     width: 60%;
+  }
+
+  /* トップ */
+  main {
+    margin-left: 240px;
   }
   #top-image {
     display: block;
@@ -253,10 +263,15 @@ footer p {
     max-height: 700px;
     object-fit: cover;
     object-position: 100% 0;
-    position: absolute;
-    top: 0;
   }
   
+  /* see more */
+  .top-menu-pc {
+    width: 90%;
+    margin: 5%;
+    background-color: #ffffff;
+  }
+
   /*.pc-only, .pc-img {
     display: block;
   }
