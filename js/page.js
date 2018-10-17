@@ -34,7 +34,7 @@ $(document).ready(function() {
 			break;
 
 		  case "page2":
-			pagenum = "commingsoon"; //ページが完成したら、pagenum="timetable"に変える
+			pagenum = "timetable"; //ページが完成したら、pagenum="timetable"に変える
 			break;
 
 		  case "page3":
