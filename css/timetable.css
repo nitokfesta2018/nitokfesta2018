@@ -25,8 +25,13 @@
 }
 
 /*button*/
-#arina_button, #stilt_button, #others_button{
+#arina_button{
+  background-color: #577342;
+}
+#stilt_button, #others_button{
   background-color: #ECE3D4;
+}
+#arina_button, #stilt_button, #others_button{
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
@@ -35,8 +40,15 @@
   cursor: pointer;
   background-color: rgb(87, 115, 66);
 }
-/*timetableの表示*/
+/*ページにとんだときのtimetableの表示*/
 .arina_timetable{
+  display: show;
+}
+.stilt_timetable, .others_timetable{
+  display: none;
+}
+/*timetableの表示*/
+.arina_timetable, .stilt_timetable, .others_timetable{
   text-align: center;
   margin:100px;
 }
