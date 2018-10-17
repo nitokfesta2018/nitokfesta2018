@@ -1,4 +1,4 @@
-#page-event {
+.list {
   margin: 5%;
   height: 90%;
   min-height: 600px;
@@ -7,19 +7,40 @@
   border-radius: 10px;
 }
 
-.game-class {
-  margin: ;
+.game > div, .food > div {
+  padding: 2%;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+}
+.subtitle-event {
+  display: block;
+  margin: 0 auto;
+  height: 71px;
+}
+.cell img {
+  width: 20%;
+  height: 20%;
+  max-width: 200px;
+  max-height: 200px;
+}
+.cell-text {
+  margin-left: 2%;
+}
+.cell-text p {
+  text-align: left;
+}
+.cell-title {
+  color: #f38524;
+  font-size: 18pt;
+}
+.cell-grade {
+  color: #313131;
+}
+.cell-place {
+  color: #f38524;
 }
 
-.game-class img {
-  width: 20%;
-  /*border-radius: 10px;*/
-}
-  
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 660px) {
 
 }
