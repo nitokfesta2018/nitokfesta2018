@@ -65,13 +65,15 @@ p{
   cursor: pointer;
   background-color: rgb(87, 115, 66);
 }
-/*ページにとんだときのtimetableの表示*/
+
+/*ページにとんだときの最初のtimetableの表示*/
 .arina_timetable{
   display: show;
 }
 .stilt_timetable, .others_timetable{
   display: none;
 }
+
 /*timetableの表示*/
 .arina_timetable, .stilt_timetable, .others_timetable{
   width: 100%;

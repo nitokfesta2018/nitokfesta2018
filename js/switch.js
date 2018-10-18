@@ -1,8 +1,10 @@
 /*arinaボタン押したとき*/
 $(document).on("click", "#arina_button",  function() {
+	/*表示・非表示の切り替え*/
 	$('.arina_timetable').css("display", "block");
 	$('.stilt_timetable').css("display", "none");
 	$('.others_timetable').css("display", "none");
+	/*ボタンの色変更*/
 	$(this).css("background-color", "#577342");
 	$("#stilt_button").css("background-color", "#ECE3D4");
 	$("#others_button").css("background-color", "#ECE3D4");	
