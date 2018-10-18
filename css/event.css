@@ -7,6 +7,32 @@
   border-radius: 10px;
 }
 
+#list-game {
+  display: block;
+}
+#list-food, #list-others {
+  display: none;
+}
+.button-event {
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.button-event > div {
+  padding: 10px;
+  background-color: #ECE3D4;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.button-event > div:hover {
+  cursor: pointer;
+  background-color: #577342;
+}
+
+/* 各企画・イベントのリスト */
 #list-game > div, #list-food > div, #list-others > div {
   padding: 2%;
   border-bottom: 1px solid #eee;
