@@ -18,25 +18,24 @@
 }
 
 .attention_wrapper{
-  position: relative;
-  margin: 30px auto;
-  height: 100px;
+/*  position: relative;*/
+  margin: 0 auto;
+  height: 150px;
   width: 70%;
-  background-color: white;
 }
 
 .attention{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform : translate(-50%,-50%);
-  transform : translate(-50%,-50%);
+  background-color: white;
+  text-align: center;
+
 }
 
 p{
+  background-color: white;
+  font-size: 18px;
   display: inline-block;
   text-align: left;
+  padding: 20px 0 20px 0;
 }
 
 .timetable_carpet{
