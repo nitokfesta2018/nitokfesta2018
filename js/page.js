@@ -18,7 +18,7 @@ function hamburger() {
 
 $(document).ready(function() {
 	hamburger();
-	$(this).on("click", ".top-menu-button, .header-img > img, .nav-content-link, .nav-content-title-logo",  function() {
+	$(this).on("click", ".top-menu-button, .see-more-pc, .header-img > img, .nav-content-link, .nav-content-title-logo",  function() {
 		$("article#main_content").empty().html("<p id='loading'>Loading...</p>");
 		$("html, body").scrollTop(0);
 		//menu style change
@@ -30,7 +30,7 @@ $(document).ready(function() {
 		var pagenum = $(this).attr('id').slice(0, 5);
 		switch (pagenum) {
 		  case "page1":
-			pagenum = "commingsoon"; //ページが完成したら、pagenum="event"に変える
+			pagenum = "event"; //ページが完成したら、pagenum="event"に変える
 			break;
 
 		  case "page2":
@@ -46,9 +46,17 @@ $(document).ready(function() {
 			break;
 
 		  case "page5":
-			pagenum = "poster"; //pc版のみのページ
+			pagenum = "poster"; //PC版のみのページ
+			break;
+		
+		  case "page6":
+			pagenum = "commingsoon" //ページ作ったら sponsor に直す
 			break;
 
+		  case "page7":
+			pagenum = "commingsoon" //ページ作ったら backnumber に直すPC版のみのページ
+			break;
+		
 		  default:
 			pagenum = "index";
 			break;

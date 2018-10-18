@@ -1,0 +1,96 @@
+#list-game, #list-food, #list-others {
+  margin: 5%;
+  height: 90%;
+  min-height: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+/* 初めてページを訪れたときの初期状態 */
+#list-game {
+  display: block;
+}
+#list-food, #list-others {
+  display: none;
+}
+
+/* button */
+.button-event {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+#button-game, #button-food, #button-others {
+  width: 20%;
+  padding: 2%;
+  background-color: #ECE3D4;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+#button-game img, #button-food img, #button-others img {
+  width: 100%;
+}
+#button-game:hover, #button-food:hover, #button-others:hover {
+  cursor: pointer;
+  background-color: #577342;
+}
+
+/* 各企画・イベントのリスト */
+.cell {
+  padding: 2%;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: flex-start;
+}
+.subtitle-event {
+  display: block;
+  margin: 0 auto;
+  height: 71px;
+}
+.cell img {
+  width: 20%;
+  height: 20%;
+}
+.cell-text {
+  margin-left: 2%;
+}
+.cell-text p {
+  text-align: left;
+}
+.cell-title {
+  color: #f38524;
+  font-size: 15pt;
+}
+.cell-grade {
+  color: #313131;
+}
+.cell-place {
+  color: #f38524;
+}
+
+@media screen and (min-width: 1000px) {
+  #button-game, #button-food, #button-others {
+    max-height: 100px;
+    padding: 10px;
+  }
+  #button-game img, #button-food img, #button-others img {
+    max-height: 100px;
+  }
+
+  .subtitle-event {
+    height: 100px;
+  }
+  .cell {
+    padding: 10px;
+  }
+  .cell img {
+    width: 100px;
+    height: 100px;
+  }
+  .cell-title {
+    font-size: 24pt;
+  }
+}

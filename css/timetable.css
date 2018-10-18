@@ -65,7 +65,6 @@ p{
   cursor: pointer;
   background-color: rgb(87, 115, 66);
 }
-
 /*ページにとんだときの最初のtimetableの表示*/
 .arina_timetable{
   display: show;
@@ -110,4 +109,3 @@ p{
     height: 100%;
   }
 }
- 
