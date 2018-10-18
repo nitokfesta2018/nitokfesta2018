@@ -6,10 +6,8 @@
     height: 71px;*/
     margin: 5% auto;
     width: 70%;
-/*
     max-width: 400px;
     max-height: 71px;
-*/
 }
 .button_wrapper{
   display: flex;
@@ -34,7 +32,7 @@
   text-align: center;
 }
 
-p{
+#page-timetable > p{
   background-color: white;
   font-size: 18px;
   display: inline-block;
