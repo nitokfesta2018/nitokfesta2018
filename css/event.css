@@ -1,4 +1,4 @@
-.list {
+#list-game, #list-food, #list-others {
   margin: 5%;
   height: 90%;
   min-height: 600px;
@@ -7,7 +7,7 @@
   border-radius: 10px;
 }
 
-.game > div, .food > div {
+#list-game > div, #list-food > div, #list-others > div {
   padding: 2%;
   border-bottom: 1px solid #eee;
   display: flex;
