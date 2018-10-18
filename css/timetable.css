@@ -17,6 +17,28 @@
   margin: 25px 50px 100px 50px;
 }
 
+.attention_wrapper{
+  position: relative;
+  margin: 30px auto;
+  height: 100px;
+  width: 70%;
+  background-color: white;
+}
+
+.attention{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
+}
+
+p{
+  display: inline-block;
+  text-align: left;
+}
+
 .timetable_carpet{
   margin: 0 auto;
   height: 800px;
