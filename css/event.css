@@ -17,11 +17,10 @@
   margin: 5%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
-
 .button-event > div {
-  padding: 10px;
+  padding: 2%;
   background-color: #ECE3D4;
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -58,7 +57,7 @@
 }
 .cell-title {
   color: #f38524;
-  font-size: 18pt;
+  font-size: 25px;
 }
 .cell-grade {
   color: #313131;
