@@ -25,13 +25,13 @@ p{
 }
 
 .accent{
-    color: #F38524
-    ;
+    color: #F38524;
 }
 .carpet{
     background-color: white;
     margin: 0 5% 5% 5%;
     border-radius: 10px;
+    min-height: 600px;
 }
 
 .map{
@@ -54,9 +54,10 @@ p{
 }
 .sentence p{
     text-align: center;
+    font-size: small;
 }
 
-@media screen and (min-width: 1001px){
+@media screen and (min-width: 660px){
     section#page_access iframe{
         height: 200px;
     }
