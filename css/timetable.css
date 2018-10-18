@@ -4,10 +4,12 @@
 .timetable_title{
     /*width: 400px;
     height: 71px;*/
-    margin: 5%;
+    margin: 5% auto;
     width: 70%;
+/*
     max-width: 400px;
     max-height: 71px;
+*/
 }
 .button_wrapper{
   display: flex;
@@ -17,6 +19,7 @@
   margin: 25px 50px 100px 50px;
 }
 
+/*注意事項*/
 .attention_wrapper{
 /*  position: relative;*/
   margin: 0 auto;
@@ -27,7 +30,6 @@
 .attention{
   background-color: white;
   text-align: center;
-
 }
 
 p{
@@ -35,11 +37,12 @@ p{
   font-size: 18px;
   display: inline-block;
   text-align: left;
-  padding: 20px 0 20px 0;
+  margin: 20px 0 20px 0;
 }
 
 .timetable_carpet{
-  margin: 0 auto;
+ position: relative;
+  margin: 40px auto;
   height: 800px;
   width: 70%;
   background-color: white;
@@ -69,8 +72,15 @@ p{
 }
 /*timetableの表示*/
 .arina_timetable, .stilt_timetable, .others_timetable{
-  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
+
 }
+
 
 /**/
 @media screen and (min-width: 660px) {
@@ -79,5 +89,15 @@ p{
 
 /*スマホ版*/
 @media screen and (max-width: 660px){
-
+  .attention_wrapper{
+  height: 40%;
 }
+.timetable_carpet{
+  margin: 40px auto;
+  height: 300px;
+}
+
+.arina_timetable, .stilt_timetable, .others_timetable{
+  width: 100%;
+}
+ 
