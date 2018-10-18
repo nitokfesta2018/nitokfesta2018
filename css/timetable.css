@@ -1,0 +1,84 @@
+.sub_title{
+  text-align: center;
+}
+.timetable_title{
+    /*width: 400px;
+    height: 71px;*/
+    margin: 5%;
+    width: 70%;
+    max-width: 400px;
+    max-height: 71px;
+}
+.button_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 25px 50px 100px 50px;
+}
+
+.attention_wrapper{
+  position: relative;
+  margin: 30px auto;
+  height: 100px;
+  width: 70%;
+  background-color: white;
+}
+
+.attention{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
+}
+
+p{
+  display: inline-block;
+  text-align: left;
+}
+
+.timetable_carpet{
+  margin: 0 auto;
+  height: 800px;
+  width: 70%;
+  background-color: white;
+}
+/*button*/
+#arina_button{
+  background-color: #577342;
+}
+#stilt_button, #others_button{
+  background-color: #ECE3D4;
+}
+#arina_button, #stilt_button, #others_button{
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
+}
+#arina_button:hover, #stilt_button:hover, #others_button:hover{
+  cursor: pointer;
+  background-color: rgb(87, 115, 66);
+}
+/*ページにとんだときのtimetableの表示*/
+.arina_timetable{
+  display: show;
+}
+.stilt_timetable, .others_timetable{
+  display: none;
+}
+/*timetableの表示*/
+.arina_timetable, .stilt_timetable, .others_timetable{
+  text-align: center;
+}
+
+/**/
+@media screen and (min-width: 660px) {
+
+}
+
+/*スマホ版*/
+@media screen and (max-width: 660px){
+
+}
