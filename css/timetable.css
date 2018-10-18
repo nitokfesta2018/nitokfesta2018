@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: center;
-  margin: 50px;
+  margin: 25px 50px 100px 50px;
 }
 
 .timetable_carpet{
@@ -23,7 +23,6 @@
   width: 70%;
   background-color: white;
 }
-
 /*button*/
 #arina_button{
   background-color: #577342;
@@ -50,6 +49,5 @@
 /*timetableの表示*/
 .arina_timetable, .stilt_timetable, .others_timetable{
   text-align: center;
-  margin:100px;
 }
 
