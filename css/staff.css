@@ -66,8 +66,8 @@ p{
   height: 390px;
 }*/
 
-
-@media screen and (min-width: 1001px) {
+/*pcの閾値*/
+@media screen and (min-width: 660px) {
   .director_gene {
     width: 22%;
   }
