@@ -30,7 +30,7 @@ $(document).ready(function() {
 		var pagenum = $(this).attr('id').slice(0, 5);
 		switch (pagenum) {
 		  case "page1":
-			pagenum = "commingsoon"; //ページが完成したら、pagenum="event"に変える
+			pagenum = "event"; //ページが完成したら、pagenum="event"に変える
 			break;
 
 		  case "page2":

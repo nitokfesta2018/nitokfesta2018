@@ -1,0 +1,46 @@
+#list-game, #list-food, #list-others {
+  margin: 5%;
+  height: 90%;
+  min-height: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+#list-game > div, #list-food > div, #list-others > div {
+  padding: 2%;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: flex-start;
+}
+.subtitle-event {
+  display: block;
+  margin: 0 auto;
+  height: 71px;
+}
+.cell img {
+  width: 20%;
+  height: 20%;
+  max-width: 200px;
+  max-height: 200px;
+}
+.cell-text {
+  margin-left: 2%;
+}
+.cell-text p {
+  text-align: left;
+}
+.cell-title {
+  color: #f38524;
+  font-size: 18pt;
+}
+.cell-grade {
+  color: #313131;
+}
+.cell-place {
+  color: #f38524;
+}
+
+@media screen and (min-width: 660px) {
+
+}
