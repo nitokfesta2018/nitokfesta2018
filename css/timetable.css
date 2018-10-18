@@ -22,12 +22,13 @@
 .attention_wrapper{
 /*  position: relative;*/
   background-color: white;
-  margin: 5% 0;
-  border-radius: 5px;
+  margin: 2% 0;
+  border-radius: 10px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 .attention p{
   text-align: left;
+  font-size: small;
 }
 
 #page-timetable {
@@ -105,9 +106,6 @@
 
 /*スマホ版*/
 @media screen and (max-width: 660px){
-  .attention p {
-    font-size: small;
-  }
   .arina_timetable, .stilt_timetable, .others_timetable {
     width: 90%;
     margin: 0 5%;

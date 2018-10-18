@@ -32,9 +32,11 @@ p{
   max-height: 390px;
 }
 .name{
-  font-size: 25px;
   color: #577342;
   margin: 0;
+}
+.name p {
+  font-size: medium;
 }
 .position{
   margin: 0;
@@ -43,6 +45,9 @@ p{
   margin-top: 10px;
   margin-bottom: 40px;
   width: 100%;
+}
+.position p, .say_a_word p {
+  font-size: small;
 }
 
 
