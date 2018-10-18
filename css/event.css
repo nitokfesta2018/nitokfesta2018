@@ -68,7 +68,7 @@
 .subtitle-event {
   display: block;
   margin: 0 auto;
-  height: 71px;
+  height: 50px;
 }
 .cell img {
   width: 20%;
@@ -82,35 +82,34 @@
 }
 .cell-title {
   color: #f38524;
-  font-size: 15pt;
+  font-size: medium;
 }
 .cell-grade {
   color: #313131;
+  font-size: small;
 }
 .cell-place {
   color: #f38524;
+  font-size: small;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 660px) {
   #button-game, #button-food, #button-others {
     width: 30%;
     padding: 10px;
   }
   #button-game img, #button-food img, #button-others img {
-    width: 50%;
+    width:50%;
   }
-
   .subtitle-event {
-    height: 100px;
+    height: 70px;
   }
   .cell {
     padding: 10px;
+    align-items: center;
   }
   .cell img {
     width: 100px;
     height: 100px;
-  }
-  .cell-title {
-    font-size: 24pt;
   }
 }
