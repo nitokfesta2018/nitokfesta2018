@@ -26,10 +26,16 @@
 #button-game, #button-food, #button-others {
   width: 20%;
   padding: 2%;
-  background-color: #ECE3D4;
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
+#button-game {
+  background-color: #577342;
+}
+#button-food, #button-others {
+  background-color: #ece3d4;
+}
+
 #button-game img, #button-food img, #button-others img {
   width: 100%;
 }

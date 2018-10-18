@@ -9,45 +9,53 @@
     max-width: 400px;
     max-height: 71px;
 }
+/*
 .button_wrapper{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: center;
-  margin: 25px 50px 100px 50px;
-}
+  /*margin: 25px 50px 100px 50px;
+}*/
 
 /*注意事項*/
 .attention_wrapper{
 /*  position: relative;*/
   background-color: white;
-  margin: 0 auto;
-  height: 150px;
-  width: 70%;
+  margin: 5% 0;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.attention p{
+  text-align: left;
 }
 
-.attention{
-  margin: 10px;
-  background-color: white;
-  text-align: center;
+#page-timetable {
+  margin: 5%;
 }
 
-#page-timetable > p{
+/*#page-timetable > p{
   background-color: white;
   font-size: 18px;
   display: inline-block;
   text-align: left;
-  margin: 20px 0 20px 0;
-}
+}*/
 
 .timetable_carpet{
- position: relative;
-  margin: 40px auto;
-  height: 800px;
-  width: 70%;
+  height: 90%;
+  min-height: 600px;
   background-color: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 /*button*/
+.button_wrapper{
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
 #arina_button{
   background-color: #577342;
 }
@@ -55,9 +63,13 @@
   background-color: #ECE3D4;
 }
 #arina_button, #stilt_button, #others_button{
+  width: 30%;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
+  /*box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);*/
+}
+#arina_button img, #stilt_button img, #others_button img {
+  width: 50%;
 }
 #arina_button:hover, #stilt_button:hover, #others_button:hover{
   cursor: pointer;
@@ -65,7 +77,7 @@
 }
 /*ページにとんだときの最初のtimetableの表示*/
 .arina_timetable{
-  display: show;
+  display: block;
 }
 .stilt_timetable, .others_timetable{
   display: none;
@@ -73,37 +85,40 @@
 
 /*timetableの表示*/
 .arina_timetable, .stilt_timetable, .others_timetable{
-  width: 100%;
-  position: absolute;
+  width: 80%;
+  margin: 0 10%;
+  /*position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform : translate(-50%,-50%);
-  transform : translate(-50%,-50%);
-
+  transform : translate(-50%,-50%);*/
 }
 
 /*window幅が768 < x < */
 /*window幅がx < 768*/
-@media screen and (min-width: 768px) and (max-width:1001px){
+/*@media screen and (min-width: 768px) and (max-width:1001px){
   .timetable_carpet{
     background-color: transparent;
   }
-}
+}*/
 
 /*スマホ版*/
 @media screen and (max-width: 660px){
-  .attention_wrapper{
-    height: 40%;
+  .attention p {
+    font-size: small;
   }
-
-  .timetable_carpet{
-    background-color: white;
-    margin: 20px auto;
-    height: 300px;
+  .arina_timetable, .stilt_timetable, .others_timetable {
+    width: 90%;
+    margin: 0 5%;
   }
-
-  .arina_timetable, .stilt_timetable, .others_timetable{
-    height: 100%;
+  #arina_button, #stilt_button, #others_button{
+    width: 30%;
+    padding: 2%;
+    border-radius: 5px;
+    /*box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);*/
+  }
+  #arina_button img, #stilt_button img, #others_button img {
+    width: 100%;
   }
 }
