@@ -50,7 +50,7 @@ $(document).ready(function() {
 			break;
 		
 		  case "page6":
-			pagenum = "commingsoon" //ページ作ったら sponsor に直す
+			pagenum = "sponsor" //ページ作ったら sponsor に直す
 			break;
 
 		  case "page7":
