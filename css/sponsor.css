@@ -1,7 +1,6 @@
 .sub-title-sponsor{
   text-align: center;
 }
-
 .sub-title-sponsor > img {
   margin: 5%;
   width: 70%;
@@ -18,3 +17,18 @@
   border-radius: 10px;
 }
 
+#sponsor-list {
+  padding: 0;
+  margin-left: 10px;
+  background-color: white;
+  text-align: left;
+  list-style-type: none;
+}
+#sponsor-list li {
+  color: #313131;
+  margin-bottom: 10px;
+}
+#sponsor-list li::before {
+  content: "■ ";
+  color: #577342;
+}
