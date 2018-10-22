@@ -50,11 +50,11 @@ $(document).ready(function() {
 			break;
 		
 		  case "page6":
-			pagenum = "sponsor" //ページ作ったら sponsor に直す
+			pagenum = "sponsor"
 			break;
 
 		  case "page7":
-			pagenum = "commingsoon" //ページ作ったら backnumber に直すPC版のみのページ
+			pagenum = "backnumber" //PC版のみのページ
 			break;
 		
 		  default:
