@@ -2,29 +2,47 @@ $(document).on("click", "#button-game", function() {
     $('article#list-game').show();
     $('article#list-food').hide();
     $('article#list-others').hide();
+    $('article#list-band').hide();
 
     $(this).css("background-color", "#577342");
     $('#button-food').css("background-color", "#ECE3D4");
     $('#button-others').css("background-color", "#ECE3D4");
+    $('#button-band').css("background-color", "#ECE3D4");
 });
 
 $(document).on("click", "#button-food", function() {
     $('article#list-game').hide();
     $('article#list-food').show();
     $('article#list-others').hide();
+    $('article#list-band').hide();
 
     $('#button-game').css("background-color", "#ECE3D4");
     $(this).css("background-color", "#577342");
     $('#button-others').css("background-color", "#ECE3D4");
+    $('#button-band').css("background-color", "#ECE3D4");
 });
 
 $(document).on("click", "#button-others", function() {
     $('article#list-game').hide();
     $('article#list-food').hide();
     $('article#list-others').show();
+    $('article#list-band').hide();
 
     $('#button-game').css("background-color", "#ECE3D4");
     $('#button-food').css("background-color", "#ECE3D4");
+    $(this).css("background-color", "#577342");
+    $('#button-band').css("background-color", "#ECE3D4");
+});
+
+$(document).on("click", "#button-band", function() {
+    $('article#list-game').hide();
+    $('article#list-food').hide();
+    $('article#list-others').hide();
+    $('article#list-band').show();
+
+    $('#button-game').css("background-color", "#ECE3D4");
+    $('#button-food').css("background-color", "#ECE3D4");
+    $('#button-others').css("background-color", "#ECE3D4");
     $(this).css("background-color", "#577342");
 });
 

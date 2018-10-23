@@ -2,7 +2,7 @@
   margin: 5%
 }
 
-#list-game, #list-food, #list-others {
+#list-game, #list-food, #list-others, #list-band {
   height: 90%;
   min-height: 600px;
   background-color: white;
@@ -14,7 +14,7 @@
 #list-game {
   display: block;
 }
-#list-food, #list-others {
+#list-food, #list-others, #list-band {
   display: none;
 }
 
@@ -26,22 +26,22 @@
   justify-content: space-around;
   text-align: center;
 }
-#button-game, #button-food, #button-others {
-  width: 30%;
-  padding: 2%;
+#button-game, #button-food, #button-others, #button-band{
+  width: 20%;
+/*  padding: 2%;*/
   border-radius: 5px;
   /*box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);*/
 }
 #button-game {
   background-color: #577342;
 }
-#button-food, #button-others {
+#button-food, #button-others, #button-band{
   background-color: #ece3d4;
 }
-#button-game img, #button-food img, #button-others img {
+#button-game img, #button-food img, #button-others img, #button-band img {
   width: 100%;
 }
-#button-game:hover, #button-food:hover, #button-others:hover {
+#button-game:hover, #button-food:hover, #button-others:hover, #button-band:hover {
   cursor: pointer;
   background-color: #577342;
 }
@@ -93,13 +93,13 @@
   font-size: small;
 }
 
-@media screen and (min-width: 660px) {
-  #button-game, #button-food, #button-others {
-    width: 30%;
+@media screen and (max-width: 660px) {
+  #button-game, #button-food, #button-others, #button-band {
+ /*   width: 30%;*/
     padding: 10px;
   }
-  #button-game img, #button-food img, #button-others img {
-    width: 50%;
+  #button-game img, #button-food img, #button-others img, #button-band img {
+    width: 100%;
   }
   .subtitle-event {
     height: 70px;
