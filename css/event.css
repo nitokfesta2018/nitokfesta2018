@@ -57,12 +57,13 @@
 .attention-toggle {
   display: block;
   outline: none;
-  color: #f38524
+  color: #f38524;
+  font-weight: bold;
 }
 .attention-toggle::before {
   display: inline-block;
-  content: "▼ ";
-  margin-left: 10px;
+  content: "▼";
+  margin: 0 10px;
   color: #f38524;
   font-size: 24px;
   transition: all 300ms ease;
