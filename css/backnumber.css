@@ -1,0 +1,53 @@
+#backnumber_title {
+  margin: 5%;
+  width: 70%;
+  max-width: 400px;
+  max-height: 71px;
+}
+
+#page-backnumber {
+  margin: 0 5% 5% 5%;
+  height: 90%;
+  min-height: 600px;
+  background-color: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+#description {
+  padding-top: 5%;
+}
+
+#backnumber-contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+.link {
+  margin: 2% 0;
+  text-align: center;
+}
+.link a img {
+  background-color: #f38524;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.link p {
+  margin: 0;
+  font-size: small;
+}
+
+.link-none {
+  margin: 2% 0;
+  text-align: center;
+}
+.link-none img {
+  background-color: #ECE3D4;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.link-none p {
+  margin: 0;
+  font-size: small;
+}
