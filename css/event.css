@@ -53,9 +53,50 @@
   border-radius: 10px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-.text p {
-  text-align: left;
-  font-size: small;
+/* 注意事項開閉用 */
+.attention-toggle {
+  margin-left: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.attention-toggle h3 {
+  margin: 2% 0;
+  color: #f38524;
+  font-size: 24px;
+}
+.triangle {
+  position: relative;
+  top: 5px;
+  border-top: 10px solid #f38524;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-top-width: 15px;
+}
+/* 注意事項中身 */
+.attention-list {
+  margin: 0 5%;
+}
+.attention-title {
+  margin: 0;
+  color: #313131;
+}
+.attention-text{
+  margin-top: 0;
+  margin-bottom: 5%; 
+  padding: 0;
+  list-style: none;
+  color: #313131;
+}
+.attention-text li::before {
+  content: "■ ";
+  color: #f38524;
+}
+.attention-list > p {
+  color: #313131;
+  padding-bottom: 2%;
+  font-size: 10pt;
 }
 
 /* 各企画・イベントのリスト */
