@@ -1,6 +1,5 @@
 @media screen and (min-width: 660px) {
   .sub-title-poster {
-    margin: 5%;
     text-align: center;
   }
   .sub-title-poster img {
@@ -11,7 +10,7 @@
   }
 
   #page-poster {
-    margin: 5%;
+    margin: 0 5% 5% 5%;
     min-height: 600px;
     background-color: white;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -30,6 +29,5 @@
   }
   .author p {
     margin: 0;
-    font-size: small;
   }
 }
