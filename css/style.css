@@ -281,7 +281,7 @@ footer p {
   .top-menu-pc {
     display: block;
     width: 90%;
-    height: 400px;
+    max-height: 600px;
     margin: 5%;
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
@@ -291,6 +291,7 @@ footer p {
     margin-left: 2%;
     width: 40%;
   }
+  
   /* でっかくて少し小さい四角いやつ */
   .top-menu-pc-small {
     margin-left: 5%;
@@ -345,18 +346,44 @@ footer p {
     background-position: left;
   }
   /* see more */
+  /*位置調整*/
+  p#top_seemore{
+    width: 90%;
+    text-align: right;
+  }
+  /*大きさ設定*/
   .see-more-pc {
     cursor: pointer;
     width: 30%;
-    position: relative;
-    top: 150px;
-    right: -25%;
   }
-  .top-menu-pc-small > .top-menu-pc > .see-more-pc {
+
+  .see-more-pc-small{
     cursor: pointer;
-    width: 80%;
-    max-width: 250px;
-    top: 100px;
-    right: -15%;
+    width: 50%;
+  }
+  /*枠*/
+  .see-more-pc, .see-more-pc-small{
+    background-color: #F38524;
+    border-radius: 50px;
+    padding: 0 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #bd6565;
+    transition: .2s;
+    max-width: 200px;
+    max-height: 67px;
+  }
+  .see-more-pc:hover, .see-more-pc-small:hover{
+    background-color: #FFBA55;
+  }
+  /*see more active時*/
+  .see-more-pc:active, .see-more-pc-small:active{
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    border-bottom: none;
   }
 }
+<a href="#feature">
+  <img src="img/img_scrollarrow.png" alt="SCROLL" style="top: 0px;">
+</a>
