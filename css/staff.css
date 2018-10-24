@@ -18,14 +18,24 @@ p{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding-top: 50px;
+/*  padding-top: 50px;*/
 /*  text-align: center;*/
 }
 
+/* 実行委員長 */
+#boss {
+  text-align: center;
+  padding-top: 40px;
+}
+#boss img {
+  width: 40%;
+  max-width: 200px;
+}
+
+/* 局長 */
 .director_gene {
   width: 40%;
 }
-
 .director_gene img {
   width: 100%;
   max-width: 300px;
