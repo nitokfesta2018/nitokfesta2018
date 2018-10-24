@@ -53,10 +53,63 @@
   border-radius: 10px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-.text p {
-  text-align: left;
-  font-size: small;
+/* 注意事項開閉用 */
+.attention-toggle {
+  display: block;
+  outline: none;
+  color: #f38524;
+  font-weight: bold;
 }
+.attention-toggle::before {
+  display: inline-block;
+  content: "▼";
+  margin: 0 10px;
+  color: #f38524;
+  font-size: 24px;
+  transition: all 300ms ease;
+}
+/*開いた時の処理*/
+details[open] .attention-list{
+  animation: openDetails 400ms ease;
+}
+details[open] .attention-toggle::before {
+  transform: rotate(180deg);
+}
+@keyframes openDetails {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    background: #ffffff;
+  }
+}
+/* 注意事項中身 */
+.attention-list {
+  margin: 0 5%;
+}
+.attention-title {
+  margin: 0;
+  color: #313131;
+}
+.attention-text{
+  margin-top: 0;
+  margin-bottom: 20px; 
+  padding: 0;
+  list-style: none;
+  color: #313131;
+}
+.attention-text li::before {
+  content: "■ ";
+  color: #f38524;
+}
+.attention-list > p {
+  color: #313131;
+  padding-bottom: 2%;
+  font-size: 10pt;
+}
+
+
 
 /* 各企画・イベントのリスト */
 .cell {
@@ -93,7 +146,7 @@
   font-size: small;
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (min-width: 660px) {
   #button-game, #button-food, #button-others, #button-band {
  /*   width: 30%;*/
     padding: 10px;
@@ -103,7 +156,12 @@
   }
   .subtitle-event {
     height: 70px;
-  }
+  }/*
+  .cells {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }*/
   .cell {
     padding: 10px;
     align-items: center;
