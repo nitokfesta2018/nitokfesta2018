@@ -47,9 +47,9 @@ header {
 #nav-open {
   position: absolute;
   top: 20%;
-  left: 85%;
+  right: 5%;
   display: inline-block;
-  width: 20%;
+  width: 10%;
   height: 20%;
   vertical-align: middle;
 }
@@ -57,7 +57,7 @@ header {
 #nav-open span, #nav-open span:before, #nav-open span:after {
   position: relative;
   height: 3px;/*線の太さ*/
-  width: 50%;/*長さ*/
+  width: 100%;/*長さ*/
   border-radius: 3px;
   background: #555;
   display: block;
