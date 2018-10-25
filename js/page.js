@@ -27,34 +27,34 @@ $(document).ready(function() {
 		$(this).addClass("nav_a_active");
 		*/
 		//ページ遷移 ajax
-		var pagenum = $(this).attr('id').slice(0, 5);
+		var pagenum = $(this).data('linkName');
 		switch (pagenum) {
 		  case "page1":
-			pagenum = "event"; //ページが完成したら、pagenum="event"に変える
+			pagenum = "event";
 			break;
 
 		  case "page2":
-			pagenum = "timetable"; //ページが完成したら、pagenum="timetable"に変える
+			pagenum = "timetable";
 			break;
 
 		  case "page3":
-			pagenum = "access";
+			pagenum = "poster";
 			break;
 
 		  case "page4":
-			pagenum = "staff";
+			pagenum = "sponsor";
 			break;
 
 		  case "page5":
-			pagenum = "poster"; //PC版のみのページ
+			pagenum = "staff";
 			break;
 		
 		  case "page6":
-			pagenum = "sponsor"
+			pagenum = "access"
 			break;
 
 		  case "page7":
-			pagenum = "backnumber" //PC版のみのページ
+			pagenum = "backnumber"
 			break;
 		
 		  default:
