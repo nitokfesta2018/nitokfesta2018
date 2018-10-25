@@ -194,7 +194,7 @@ header {
 }
 
 /*PCのトップ画像は表示させない*/
-#top-image {
+#top-image, #illustrator {
   display: none;
 }
 
@@ -231,8 +231,8 @@ footer p {
   #nav-drawer-pc {
     display: block;
     position: absolute;
-    top: 2%;
-    left: 2%;
+    top: 10px;
+    left: 5px;
   }
   #nav-content-pc {
     margin: 0;
@@ -261,16 +261,28 @@ footer p {
 
   /* トップ */
   main {
-    margin-left: 240px;
+    margin-left: 250px;
   }
   #top-image {
     display: block;
     width: 100%;
     min-height: 600px;
-    max-height: 800px;
+    max-height: 700px;
     object-fit: cover;
     object-position: 100% 0;
   }
+  #illustrator {
+    display: block;
+    position: relative;
+    right: 10px;
+    bottom: 40px;
+  }
+  #illustrator p {
+    text-align: right;
+    font-size: small;
+    color: #313131;
+  }
+
 
   /* 小見出し的な */
   .sub-title p {
@@ -384,6 +396,3 @@ footer p {
     border-bottom: none;
   }
 }
-<a href="#feature">
-  <img src="img/img_scrollarrow.png" alt="SCROLL" style="top: 0px;">
-</a>
