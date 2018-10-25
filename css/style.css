@@ -271,17 +271,6 @@ footer p {
     object-fit: cover;
     object-position: 100% 0;
   }
-  #illustrator {
-    display: block;
-    position: relative;
-    right: 10px;
-    bottom: 40px;
-  }
-  #illustrator p {
-    text-align: right;
-    font-size: small;
-    color: #313131;
-  }
 
   /* 小見出し的な */
   .sub-title p {
