@@ -27,8 +27,8 @@
   text-align: center;
 }
 #button-game, #button-food, #button-others, #button-band{
-  width: 20%;
-/*  padding: 2%;*/
+  width: 40%;
+  margin: 5px;
   border-radius: 5px;
   /*box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);*/
 }
@@ -148,15 +148,19 @@ details[open] .attention-toggle::before {
 
 @media screen and (min-width: 660px) {
   #button-game, #button-food, #button-others, #button-band {
- /*   width: 30%;*/
-    padding: 10px;
+    width: 20%;
+    padding: 5px;
   }
   #button-game img, #button-food img, #button-others img, #button-band img {
     width: 100%;
   }
   .subtitle-event {
     height: 70px;
-  }/*
+  }
+  #arina_subtitle{
+    height: 100px;
+  }
+  /*
   .cells {
     display: flex;
     justify-content: flex-start;
