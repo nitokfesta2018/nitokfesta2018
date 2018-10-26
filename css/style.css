@@ -9,7 +9,9 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
+main{
+  min-height: 100%;
+}
 body {
   background-color: #FEFEC2;
 /*  background-image: url("../image/bg.png");*/
