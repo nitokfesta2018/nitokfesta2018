@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*Noto Sans Japaneseを読みこむ*/
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
 html, body {
   height: 100%;
@@ -9,7 +9,9 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
+main{
+  min-height: 100%;
+}
 body {
   background-color: #FEFEC2;
 /*  background-image: url("../image/bg.png");*/
